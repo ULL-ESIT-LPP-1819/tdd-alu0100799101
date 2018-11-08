@@ -4,8 +4,8 @@ require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/nu
 describe Nutricion do
     
     before :each do
-        @etiqueta1 = Nutricion.new("Zumo",1,0,4.7,4.2,0.5,0.01)
-        @etiqueta2 = Nutricion.new("Arroz",0.7,0.2,77,0.5,7.2,0.01)
+        @etiqueta1 = Nutricion.new("Zumo",1,0,0,4.7,4.2,0.5,0.01)
+        @etiqueta2 = Nutricion.new("Arroz",0.7,0.2,0,77,0.5,7.2,0.01)
     end
     
     describe"Pruebas practica 6" do
@@ -20,6 +20,10 @@ describe Nutricion do
         it"Prueba Grasa Saturada" do
             expect(@etiqueta1.saturadas).to eq(0)
             expect(@etiqueta2.saturadas).to eq(0.2)
+        end
+        it "Prueba MonoSaturadas" do
+          expect(@etiqueta1.mono).to eq(0)
+          expect(@etiqueta1.mono).to eq(0)
         end
         it"Prueba Hidratos" do
             expect(@etiqueta1.hidratos).to eq(4.7)
@@ -37,5 +41,6 @@ describe Nutricion do
             expect(@etiqueta1.sal).to eq(0.01)
             expect(@etiqueta2.sal).to eq(0.01)
         end
+        
     end
 end
