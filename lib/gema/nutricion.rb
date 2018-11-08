@@ -15,4 +15,10 @@ class Nutricion
     def valorgrasakj
         @grasa * 37
     end
+    def valorhidratoskj
+        @hidratos * 17
+    end
+    def valorproteinaskj
+        @proteinas * 17
+    end
 end
