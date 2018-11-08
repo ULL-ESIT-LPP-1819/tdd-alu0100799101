@@ -61,13 +61,37 @@ describe Nutricion do
             expect(@etiqueta1.valorgrasakj).to eq(37)
             expect(@etiqueta2.valorgrasakj).to eq(25.9)
         end
+         it "Prueba Cantidad Grasa MonoSaturadas en KJ" do
+            expect(@etiqueta1.valormonokj).to eq(0)
+            expect(@etiqueta2.valormonokj).to eq(0)
+        end
+         it "Prueba Cantidad Polisaturadas en KJ" do
+            expect(@etiqueta1.valorpolinkj).to eq(0)
+            expect(@etiqueta2.valorpolinkj).to eq(0)
+        end
         it "Prueba Cantidad Hidratos en KJ" do
             expect(@etiqueta1.valorhidratoskj).to eq(79.9)
             expect(@etiqueta2.valorhidratoskj).to eq(1309)
         end
+         it "Prueba Cantidad Polialcohol en KJ" do
+            expect(@etiqueta1.valorpolialkj).to eq(0)
+            expect(@etiqueta2.valorpolialkj).to eq(0)
+        end
+         it "Prueba Cantidad Almidon en KJ" do
+            expect(@etiqueta1.valoralmidonkj).to eq(0)
+            expect(@etiqueta2.valoralmidonkj).to eq(0)
+        end
+          it "Prueba Cantidad Fibra en KJ" do
+            expect(@etiqueta1.valorfibrakj).to eq(0)
+            expect(@etiqueta2.valorfibrakj).to eq(0)
+        end
         it "Prueba Cantidad Proteinas en KJ" do
             expect(@etiqueta1.valorproteinaskj).to eq(8.5)
             expect(@etiqueta2.valorproteinaskj).to eq(122.4)
+        end
+        it "Prueba Cantidad sal en KJ" do
+            expect(@etiqueta1.valorsalkj).to eq(0.25)
+            expect(@etiqueta2.valorsalkj).to eq(0.25)
         end
         it "Prueba Valor Energetico en KJ" do
             expect(@etiqueta1.valorenerkj).to eq(125.4)
