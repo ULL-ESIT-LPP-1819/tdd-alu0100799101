@@ -12,5 +12,7 @@ class Nutricion
 	@proteinas=proteinas
 	@sal=sal
     end
-    
+    def valorgrasakj
+        @grasa * 37
+    end
 end
