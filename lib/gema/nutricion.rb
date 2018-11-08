@@ -8,6 +8,7 @@ class Nutricion
 	@mono=mono
 	@polin=polin
 	@hidratos=hidratos
+	@azucares=azucares
 	@polial=polial
 	@almidon=almidon
 	@fibra=fibra
@@ -32,7 +33,7 @@ class Nutricion
     def valoralmidonkj
         @almidon * 17
     end
-    def valoralfibrakj
+    def valorfibrakj
         @fibra * 8
     end
     def valorproteinaskj
@@ -43,7 +44,6 @@ class Nutricion
     end
     def valorenerkj
     
-    valorgrasakj + valormonokj + valorpolinkj+ valorhidratoskj + valorpolialkj + valorproteinaskj
-    
+    valorgrasakj + valormonokj + valorpolinkj+ valorhidratoskj + valorpolialkj + valoralmidonkj + valorfibrakj + valorproteinaskj + valorsalkj
     end
 end
