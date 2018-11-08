@@ -18,8 +18,8 @@ describe Nutricion do
              expect(@etiqueta2.grasa).to eq(0.7)    
         end    
         it"Prueba Grasa Saturada" do
-            expect(@etiqueta1.saturada).to eq(0)
-            expect(@etiqueta2.saturada).to eq(0.2)
+            expect(@etiqueta1.saturadas).to eq(0)
+            expect(@etiqueta2.saturadas).to eq(0.2)
         end
     end
 end
