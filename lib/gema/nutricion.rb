@@ -1,7 +1,7 @@
 class Nutricion 
-    attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:proteinas,:sal
+    attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:polial,:almidon,:fibra,:proteinas,:sal
     
-    def initialize(nombre,grasa,saturadas,mono,polin,hidratos,azucares,proteinas,sal)
+    def initialize(nombre,grasa,saturadas,mono,polin,hidratos,azucares,polial,almidon,fibra,proteinas,sal)
     @nombre = nombre
 	@grasa = grasa
 	@saturadas=saturadas
@@ -9,6 +9,9 @@ class Nutricion
 	@polin=polin
 	@hidratos=hidratos
 	@azucares=azucares
+	@polial=polial
+	@almidon=almidon
+	@fibra=fibra
 	@proteinas=proteinas
 	@sal=sal
     end
