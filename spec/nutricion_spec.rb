@@ -58,16 +58,16 @@ describe Nutricion do
             expect(@etiqueta2.sal).to eq(0.01)
         end
         it "Prueba Cantidad Grasa en KJ" do
-            expect(@etiqueta1.valorgrasa).to eq(37)
-            expect(@etiqueta2.valorgrasa).to eq(25.9)
+            expect(@etiqueta1.valorgrasakj).to eq(37)
+            expect(@etiqueta2.valorgrasakj).to eq(25.9)
         end
         it "Prueba Cantidad Hidratos en KJ" do
-            expect(@etiqueta1.valorhidratos).to eq(79.9)
-            expect(@etiqueta2.valorhidratos).to eq(1309)
+            expect(@etiqueta1.valorhidratoskj).to eq(79.9)
+            expect(@etiqueta2.valorhidratoskj).to eq(1309)
         end
         it "Prueba Cantidad Proteinas en KJ" do
-            expect(@etiqueta1.valorproteinas).to eq(8.5)
-            expect(@etiqueta2.valorproteinas).to eq(122.4)
+            expect(@etiqueta1.valorproteinaskj).to eq(8.5)
+            expect(@etiqueta2.valorproteinaskj).to eq(122.4)
         end
         it "Prueba Valor Energetico en KJ" do
             expect(@etiqueta1.valorenerkj).to eq(125.4)
