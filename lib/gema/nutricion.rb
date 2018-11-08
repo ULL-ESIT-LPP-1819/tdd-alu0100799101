@@ -78,7 +78,7 @@ class Nutricion
     valorgrasakcal + valormonokcal + valorpolinkcal+ valorhidratoskcal + valorpolialkcal + valoralmidonkcal + valorfibrakcal + valorproteinaskcal + valorsalkcal
     end
     
-    def valorenerir
+    def valorenerirkj
         valorenerkj / 8400 * 100
     end
         
