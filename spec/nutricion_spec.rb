@@ -98,8 +98,8 @@ describe Nutricion do
             expect(@etiqueta2.valorenerkj).to eq(1457.5500000000002) 
         end
             it "Prueba Cantidad Grasa en Kcal" do
-            expect(@etiqueta1.valorgrasakcal).to eq(37)
-            expect(@etiqueta2.valorgrasakcal).to eq(25.9)
+            expect(@etiqueta1.valorgrasakcal).to eq(9)
+            expect(@etiqueta2.valorgrasakcal).to eq(6.3)
         end
          it "Prueba Cantidad Grasa MonoSaturadas en Kcal" do
             expect(@etiqueta1.valormonokcal).to eq(0)
@@ -110,8 +110,8 @@ describe Nutricion do
             expect(@etiqueta2.valorpolinkcal).to eq(0)
         end
         it "Prueba Cantidad Hidratos en Kcal" do
-            expect(@etiqueta1.valorhidratoskcal).to eq(79.9)
-            expect(@etiqueta2.valorhidratoskcal).to eq(1309)
+            expect(@etiqueta1.valorhidratoskcal).to eq(18.8)
+            expect(@etiqueta2.valorhidratoskcal).to eq(308)
         end
          it "Prueba Cantidad Polialcohol en Kcal" do
             expect(@etiqueta1.valorpolialkcal).to eq(0)
@@ -126,16 +126,16 @@ describe Nutricion do
             expect(@etiqueta2.valorfibrakcal).to eq(0)
         end
         it "Prueba Cantidad Proteinas en Kcal" do
-            expect(@etiqueta1.valorproteinaskcal).to eq(8.5)
-            expect(@etiqueta2.valorproteinaskcal).to eq(122.4)
+            expect(@etiqueta1.valorproteinaskcal).to eq(2)
+            expect(@etiqueta2.valorproteinaskcal).to eq(28.8)
         end
         it "Prueba Cantidad sal en Kcal" do
-            expect(@etiqueta1.valorsalkcal).to eq(0.25)
-            expect(@etiqueta2.valorsalkcal).to eq(0.25)
+            expect(@etiqueta1.valorsalkcal).to eq(0.06)
+            expect(@etiqueta2.valorsalkcal).to eq(0.06)
         end
         it "Prueba Valor Energetico en Kcal" do
-            expect(@etiqueta1.valorenerkcal).to eq(125.65)
-            expect(@etiqueta2.valorenerkcal).to eq(1457.5500000000002) 
+            expect(@etiqueta1.valorenerkcal).to eq(29.86)
+            expect(@etiqueta2.valorenerkcal).to eq(343.16) 
         end
     end
 end
