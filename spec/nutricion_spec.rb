@@ -4,7 +4,7 @@ require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/nu
 describe Nutricion do
     
     before :each do
-        @etiqueta1 = Nutricion.new("Zumo")
+        @etiqueta1 = Nutricion.new("Zumo",1)
         
     end
     
@@ -12,5 +12,8 @@ describe Nutricion do
         it "Prueba nombre" do
             expect(@etiqueta1.nombre).to eq('Zumo')
         end
+        it"Prueba Grasa" do
+            expect(@etiqueta1.grasa). to eq(1)
+        end    
     end
 end
