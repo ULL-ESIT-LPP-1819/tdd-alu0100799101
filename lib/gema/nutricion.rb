@@ -21,4 +21,9 @@ class Nutricion
     def valorproteinaskj
         @proteinas * 17
     end
+    def valorenerkj
+    
+    valorgrasakj + valorhidratoskj + valorproteinaskj
+    
+    end
 end
