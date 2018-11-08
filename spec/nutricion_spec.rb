@@ -26,8 +26,8 @@ describe Nutricion do
           expect(@etiqueta1.mono).to eq(0)
         end
         it "Prueba Polisaturadas"do
-          expect(@etiqueta1.polo).to eq(0)
-          expect(@etiqueta1.polo).to eq(0)
+          expect(@etiqueta1.polin).to eq(0)
+          expect(@etiqueta1.polin).to eq(0)
         end
         it"Prueba Hidratos" do
             expect(@etiqueta1.hidratos).to eq(4.7)
