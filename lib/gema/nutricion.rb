@@ -81,7 +81,10 @@ class Nutricion
     def valorenerir
         valorenerkj / 8400 * 100 #usando kj
     end
-        
+    def grasair
+         
+         @grasa / 70 * 100
+    end
     
 
 
