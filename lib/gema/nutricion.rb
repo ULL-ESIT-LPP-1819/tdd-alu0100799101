@@ -12,4 +12,5 @@ class Nutricion
 	@proteinas=proteinas
 	@sal=sal
     end
+    
 end

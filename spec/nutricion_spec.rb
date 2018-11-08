@@ -45,8 +45,9 @@ describe Nutricion do
             expect(@etiqueta1.sal).to eq(0.01)
             expect(@etiqueta2.sal).to eq(0.01)
         end
-        it "Prueba Valor Energetico KJ" do
-            expect(@etiqueta1.valorenerkj).to eq(0)
-            expect(@etiqueta1.valorenerkj).to eq(0)
+        it "Prueba Cantidad Grasa en KJ" do
+            expect(@etiqueta1.valorgrasakj).to eq(0)
+            expect(@etiqueta1.valorgrasakj).to eq(0)
+        end
     end
 end
