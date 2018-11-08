@@ -102,9 +102,8 @@ class Nutricion
     def salir
          @sal/6 * 100
     end
-    
-
-
-
+    def to_s
+      "( Nombre:#{@nombre},Grasa:#{@grasa},Saturadas:#{@saturadas},MonoSaturadas:#{@mono},Polisaturadas:#{@polin},Hidratos:#{@hidratos},Azucares:#{@azucares},Polialcohol:#{@polial},Almidon:#{@almidon},Fibra:#{@fibra},Proteinas:#{@proteinas},Sal:#{@sal})"
+    end
 
 end
