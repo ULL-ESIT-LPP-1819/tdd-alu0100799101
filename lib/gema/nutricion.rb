@@ -1,8 +1,8 @@
 class Nutricion 
     attr_reader :nombre , :grasa
     
-    def initialize(nombre)
+    def initialize(nombre,grasa)
         @nombre = nombre
-	@grasa = grasa
+	    @grasa = grasa
     end
 end

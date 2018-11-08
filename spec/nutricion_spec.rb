@@ -13,7 +13,7 @@ describe Nutricion do
             expect(@etiqueta1.nombre).to eq('Zumo')
         end
         it"Prueba Grasa" do
-            expect(@etiqueta1.grasa). to eq(1)
+            expect(@etiqueta1.grasa).to eq(1)
         end    
     end
 end
