@@ -1,7 +1,9 @@
 
+require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/nutricion.rb"
+
 describe Nutricion do
     
-    before:each do
+    before :each do
         @etiqueta1 = Nutricion.new("Zumo")
         
     end
