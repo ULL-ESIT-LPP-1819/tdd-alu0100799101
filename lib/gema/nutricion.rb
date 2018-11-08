@@ -84,6 +84,22 @@ class Nutricion
     def grasair
          @grasa / 70 * 100
     end
+    def saturadasir
+         @saturadas / 20 * 100
+    end 
+    
+    def hidratosir
+         @hidratos / 260 * 100
+    end
+    def azucaresir
+         @azucares / 90 * 100
+    end
+    def proteinasir
+         @proteinas / 50 * 100
+    end
+    def salir
+         @salir / 6 * 100
+    end
     
 
 
