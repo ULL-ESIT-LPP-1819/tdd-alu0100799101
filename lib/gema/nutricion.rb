@@ -46,4 +46,41 @@ class Nutricion
     
     valorgrasakj + valormonokj + valorpolinkj+ valorhidratoskj + valorpolialkj + valoralmidonkj + valorfibrakj + valorproteinaskj + valorsalkj
     end
+    def valorgrasakcal
+        @grasa * 9
+    end
+    def valormonokcal
+        @mono * 9
+    end
+    def valorpolinkcal
+        @polin * 9
+    end
+    def valorhidratoskcal
+        @hidratos * 4
+    end
+    def valorpolialkcal
+        @polial * 2.4
+    end
+    def valoralmidonkcal
+        @almidon * 4
+    end
+    def valorfibrakcal
+        @fibra * 2
+    end
+    def valorproteinaskcal
+        @proteinas * 4
+    end
+    def valorsalkcal
+        @sal * 6
+    end
+    def valorenerkcal
+    
+    valorgrasakcal + valormonokcal + valorpolinkcal+ valorhidratoskcal + valorpolialkcal + valoralmidonkcal + valorfibrakcal + valorproteinaskcal + valorsalkcal
+    end
+
+
+
+
+
+
 end
