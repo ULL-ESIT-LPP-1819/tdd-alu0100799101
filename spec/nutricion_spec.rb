@@ -145,5 +145,26 @@ describe Nutricion do
             expect(@etiqueta1.grasair).to eq(0)
             expect(@etiqueta2.grasair).to eq(1)
         end
+        it "Prueba porcentaje %IR Saturados" do
+            expect(@etiqueta1.saturadasir).to eq(0)
+            expect(@etiqueta2.saturadasir).to eq(1)
+        end
+        it "Prueba porcentaje %IR hidratos" do
+            expect(@etiqueta1.hidratosir).to eq(0)
+            expect(@etiqueta2.hidratosir).to eq(1)
+        end
+        it "Prueba porcentaje %IR Azucares" do
+            expect(@etiqueta1.azucaresir).to eq(0)
+            expect(@etiqueta2.azucaresir).to eq(1)
+        end
+        
+        it "Prueba porcentaje %IR proteinas" do
+            expect(@etiqueta1.proteinasir).to eq(0)
+            expect(@etiqueta2.proteinasir).to eq(1)
+        end
+        it "Prueba porcentaje %IR grasa" do
+            expect(@etiqueta1.salir).to eq(0)
+            expect(@etiqueta2.salir).to eq(1)
+        end
     end
 end
