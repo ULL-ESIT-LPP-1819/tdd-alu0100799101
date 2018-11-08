@@ -137,5 +137,10 @@ describe Nutricion do
             expect(@etiqueta1.valorenerkcal).to eq(29.86)
             expect(@etiqueta2.valorenerkcal).to eq(343.16) 
         end
+        it "Prueba porcentaje %IR valorenergetico en kj"
+           expect(@etiqueta1.irvalorenergetico).to eq(1.5)
+        end
+    
+    
     end
 end
