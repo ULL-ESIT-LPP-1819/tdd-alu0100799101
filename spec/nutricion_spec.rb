@@ -57,5 +57,9 @@ describe Nutricion do
             expect(@etiqueta1.valorproteinaskj).to eq(8.5)
             expect(@etiqueta2.valorproteinaskj).to eq(122.4)
         end
+        it "Prueba Valor Energetico en KJ" do
+            expect(@etiqueta1.valorenerkj).to eq(125.4)
+            expect(@etiqueta2.valorenerkj).to eq(1457.3)
+        end
     end
 end
