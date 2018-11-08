@@ -167,5 +167,8 @@ describe Nutricion do
             expect(@etiqueta2.salir).to eq(0.16666666666666669)
             
         end
+        it "Prueba Alimento Formateado"do
+        expect(@p1.to_s) == ('Valores Nutricionales 100g/100ML Zumo (Grasas:1,Saturadas:0,MonoSaturadas:0,Polisaturadas:0,Hidratos:4.7,Azucares:4.2,Polialcohol:0,Almidon:0,Fibra:0,Proteinas:0.5,Sal:0.01')
+        end
     end
 end
