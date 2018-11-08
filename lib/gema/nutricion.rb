@@ -82,23 +82,25 @@ class Nutricion
         valorenerkj / 8400 * 100 #usando kj
     end
     def grasair
-         @grasa / 70 * 100
+        
+        @grasa/70 * 100
+        
     end
     def saturadasir
-         @saturadas / 20 * 100
+         @saturadas/20 * 100
     end 
     
     def hidratosir
-         @hidratos / 260 * 100
+         @hidratos/260 * 100
     end
     def azucaresir
-         @azucares / 90 * 100
+         @azucares/90 * 100
     end
     def proteinasir
-         @proteinas / 50 * 100
+         @proteinas/50 * 100
     end
     def salir
-         @salir / 6 * 100
+         @sal/6 * 100
     end
     
 
