@@ -139,7 +139,11 @@ describe Nutricion do
         end
         it "Prueba porcentaje %IR valorenergetico " do
            expect(@etiqueta1.valorenerir).to eq(1.4958333333333333)
+           expect(@etiqueta2.valorenerir).to eq(17.158)
         end
-        
+        it "Prueba porcentaje %IR grasa" do
+            expect(@etiqueta1.grasair).to eq(1.428)
+            expect(@etiqueta2.grasair).to eq(0)
+        end
     end
 end
