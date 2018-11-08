@@ -47,7 +47,7 @@ describe Nutricion do
         end
         it "Prueba Cantidad Grasa en KJ" do
             expect(@etiqueta1.valorgrasakj).to eq(37)
-            expect(@etiqueta2.valorgrasakj).to eq(0)
+            expect(@etiqueta2.valorgrasakj).to eq(25.9)
         end
     end
 end
