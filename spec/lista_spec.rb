@@ -22,12 +22,7 @@ require 'spec_helper'
                 @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
                 @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
                 @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
-                @etiqueta1.sal
-                @etiqueta2.sal
-                @etiqueta3.sal
-                @etiqueta4.sal
-                @etiqueta5.sal
-                @etiqueta6.sal
+               
             end
              describe "#Atributos de la lista" do
                 it "La lista tiene cabeza y cola" do
@@ -57,7 +52,7 @@ require 'spec_helper'
                 end
             end
             describe "#Lista de alimentos" do
-                it 'La lista opera correctamente con los alimentos' do
+                it 'La lista opera correctamente con los nombres de la etiqueta' do
                     @mi_lista.push_back(@etiqueta1)
                     @mi_lista.push_back(@etiqueta6)
                     @mi_lista.push_front(@etiqueta4)
@@ -71,6 +66,22 @@ require 'spec_helper'
                     expect(@mi_lista.pop_back.nombre).to eq("Zumo")
                     expect(@mi_lista.pop_back.nombre).to eq("Inventada")
                     expect(@mi_lista.pop_back.nombre).to eq("Mermelada")
+                    expect(@mi_lista.n_nodos).to eq(0)
+                end
+                it 'La lista opera correctamente con la cantidad de sal de las etiquetas' do
+                    @mi_lista.push_back(@etiqueta1)
+                    @mi_lista.push_back(@etiqueta6)
+                    @mi_lista.push_front(@etiqueta4)
+                    @mi_lista.push_front(@etiqueta3)
+                    @mi_lista.push_back(@etiqueta2)
+                    @mi_lista.push_back(@etiqueta5)
+                    expect(@mi_lista.n_nodos).to eq(6)
+                    expect(@mi_lista.pop_back.sal).to eq(10)
+                    expect(@mi_lista.pop_back.sal).to eq(0.01)
+                    expect(@mi_lista.pop_back.sal).to eq(8)
+                    expect(@mi_lista.pop_back.sal).to eq (0.01)
+                    expect(@mi_lista.pop_back.sal).to eq(5)
+                    expect(@mi_lista.pop_back.sal).to eq(0)
                     expect(@mi_lista.n_nodos).to eq(0)
                 end
             end
