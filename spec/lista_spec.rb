@@ -84,8 +84,16 @@ require 'spec_helper'
                     expect(@mi_lista.pop_back.sal).to eq(0)
                     expect(@mi_lista.n_nodos).to eq(0)
                 end
-                it 'Prueba para comprobar que la cantidad diaria por IR que es 6 es mayor' do
-                  expect(@mi_lista.any? {|it| it.sal <= 6} ).to eq(true)
+                it 'Prueba para comprobar que la cantida de sal es mayor a 6 gramos IR' do
+                    
+                    @mi_lista.push_back(@etiqueta1)
+                    @mi_lista.push_back(@etiqueta6)
+                    @mi_lista.push_front(@etiqueta4)
+                    @mi_lista.push_front(@etiqueta3)
+                    @mi_lista.push_back(@etiqueta2)
+                    @mi_lista.push_back(@etiqueta5)
+                    expect(@mi_lista.pop_back.sal).to be > 6
+                  
                 end
             end
         

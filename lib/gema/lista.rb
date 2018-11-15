@@ -4,7 +4,7 @@ module Gema
     Nodo = Struct.new(:valor, :siguiente, :previo)
 
     class Lista
-        include Enumerable
+        
         attr_reader :n_nodos, :cabeza, :cola
         
         def initialize 
@@ -12,6 +12,7 @@ module Gema
             @cabeza = nil
             @cola = nil
         end
+         
         #Insertar ultima posicion de la lista
         def push_back(valor)
             nodo_aux = Nodo.new(valor, nil, nil)
