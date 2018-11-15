@@ -1,3 +1,4 @@
+module Gema
 class Nutricion 
     attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:polial,:almidon,:fibra,:proteinas,:sal
     
@@ -105,5 +106,5 @@ class Nutricion
     def to_s
       "( Nombre:#{@nombre},Grasa:#{@grasa},Saturadas:#{@saturadas},MonoSaturadas:#{@mono},Polisaturadas:#{@polin},Hidratos:#{@hidratos},Azucares:#{@azucares},Polialcohol:#{@polial},Almidon:#{@almidon},Fibra:#{@fibra},Proteinas:#{@proteinas},Sal:#{@sal})"
     end
-
+end
 end
