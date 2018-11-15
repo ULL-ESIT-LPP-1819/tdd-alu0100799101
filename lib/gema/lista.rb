@@ -12,6 +12,38 @@ module Gema
             @cabeza = nil
             @cola = nil
         end
+        #Insertar ultima posicion de la lista
+        def push_back(valor)
+            nodo_aux = Nodo.new(valor, nil, nil)
+            if @n_nodos == 0
+                @cabeza = @cola = nodo_aux
+            else
+                nodo_aux.previo = @cola
+                @cola.siguiente = nodo_aux
+                @cola = nodo_aux
+            end
+            @n_nodos+=1
+        end
+
+        def back
+            @cola.valor
+        end
+        # Inserta un elemento en la primera posición de la lista
+        def push_front(valor)
+            nodo_aux = Nodo.new(valor, nil, nil)
+            if @n_nodos == 0
+                @cabeza = @cola = nodo_aux
+            else
+                nodo_aux.siguiente = @cabeza
+                @cabeza.previo = nodo_aux
+                @cabeza = nodo_aux
+            end
+            @n_nodos+=1
+        end
+        
+        def front
+            @cabeza.valor
+        end
         
     end
 end
