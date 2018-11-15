@@ -15,8 +15,20 @@ require 'spec_helper'
     end    
     RSpec.describe Gema::Lista do
         before :each do
-            @mi_lista = Gema::Lista.new()
-        end
+                @mi_lista = Gema::Lista.new()
+                @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
+                @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
+                @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
+                @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
+                @etiqueta5 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,10)
+                @etiqueta6 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,8)
+                @etiqueta1.sal
+                @etiqueta2.sal
+                @etiqueta3.sal
+                @etiqueta4.sal
+                @etiqueta5.sal
+                @etiqueta6.sal
+            end
              describe "#Atributos de la lista" do
                 it "La lista tiene cabeza y cola" do
                     expect(@mi_lista).to have_attributes(:cabeza=>nil)
