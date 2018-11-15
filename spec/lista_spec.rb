@@ -20,8 +20,8 @@ require 'spec_helper'
                 @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
                 @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
                 @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
-                @etiqueta5 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,10)
-                @etiqueta6 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,8)
+                @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
+                @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
                 @etiqueta1.sal
                 @etiqueta2.sal
                 @etiqueta3.sal
@@ -56,5 +56,23 @@ require 'spec_helper'
                     expect(@mi_lista.n_nodos).to eq(0)
                 end
             end
+            describe "#Lista de alimentos" do
+                it 'La lista opera correctamente con los alimentos' do
+                    @mi_lista.push_back(@etiqueta1)
+                    @mi_lista.push_back(@etiqueta6)
+                    @mi_lista.push_front(@etiqueta4)
+                    @mi_lista.push_front(@etiqueta3)
+                    @mi_lista.push_back(@etiqueta2)
+                    @mi_lista.push_back(@etiqueta5)
+                    expect(@mi_lista.n_nodos).to eq(6)
+                    expect(@mi_lista.pop_back.nombre).to eq("Inventad")
+                    expect(@mi_lista.pop_back.nombre).to eq("Arroz")
+                    expect(@mi_lista.pop_back.nombre).to eq("Inventa")
+                    expect(@mi_lista.pop_back.nombre).to eq("Zumo")
+                    expect(@mi_lista.pop_back.nombre).to eq("Inventada")
+                    expect(@mi_lista.pop_back.nombre).to eq("Mermelada")
+                    expect(@mi_lista.n_nodos).to eq(0)
+                end
+            end
         
-    end
+end
