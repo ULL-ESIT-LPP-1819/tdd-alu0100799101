@@ -1,9 +1,8 @@
-require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/lista.rb"
+require 'spec_helper'
 
-
-describe Nodo do 
+RSpec.describe Gema::Nodo do
     before :all do
-        @mi_nodo = Nodo.new(2, nil, nil)
+        @mi_nodo = Gema::Nodo.new(2,nil,nil)
     end
 
     describe "Atributos del nodo" do
