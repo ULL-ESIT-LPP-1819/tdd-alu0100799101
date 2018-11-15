@@ -44,6 +44,42 @@ module Gema
         def front
             @cabeza.valor
         end
+                # Saca un elemento de la última posición de la lista
+        def pop_back
+            if @n_nodos == 0
+                nil
+            elsif @n_nodos == 1
+                valor_aux = @cola.valor
+                @cola = @cola.previo
+                @cabeza = @cola
+                @n_nodos -= 1
+                valor_aux
+            else
+                valor_aux = @cola.valor
+                @cola = @cola.previo
+                @cola.siguiente = nil
+                @n_nodos -= 1
+                valor_aux
+            end
+        end
+        # Saca un elemento de la primera posición de la lista
+        def pop_front
+            if @n_nodos == 0
+                nil
+            elsif @n_nodos == 1
+                valor_aux = @cabeza.valor
+                @cabeza = @cabeza.previo
+                @cola = @cabeza
+                @n_nodos -= 1
+                valor_aux
+            else
+                valor_aux = @cabeza.valor
+                @cabeza = @cabeza.siguiente
+                @cabeza.previo = nil
+                @n_nodos -= 1
+                valor_aux
+            end
+        end
         
     end
 end
