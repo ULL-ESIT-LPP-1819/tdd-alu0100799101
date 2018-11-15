@@ -13,4 +13,14 @@ RSpec.describe Gema::Nodo do
         end
     end
 end    
-    
+RSpec.describe Alimentos::Lista do
+    before :each do
+        @mi_lista = Alimentos::Lista.new()
+    end
+     describe "#Atributos de la lista" do
+        it "La lista tiene cabeza y cola" do
+            expect(@mi_lista).to have_attributes(:cabeza=>nil)
+            expect(@mi_lista).to have_attributes(:cola=>nil)
+        end
+    end
+end
