@@ -95,6 +95,17 @@ require 'spec_helper'
                     expect(@mi_lista.pop_back.sal).to be > 6
                   
                 end
+                 it 'Prueba para comprobar que la cantida de sal es menor a 6 gramos IR' do
+                    
+                    @mi_lista.push_back(@etiqueta1)
+                    @mi_lista.push_front(@etiqueta4)
+                    @mi_lista.push_front(@etiqueta3)
+                    @mi_lista.push_back(@etiqueta2)
+                    
+                    expect(@mi_lista.pop_back.sal).to be < 6
+                  
+                end
+            
             end
         
 end
