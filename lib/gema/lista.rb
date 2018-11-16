@@ -12,7 +12,13 @@ module Gema
             @cabeza = nil
             @cola = nil
         end
-         
+         def empty?
+              if @cabeza == nil
+               return true
+              else 
+                return false
+              end
+         end
         #Insertar ultima posicion de la lista
         def push_back(valor)
             nodo_aux = Nodo.new(valor, nil, nil)
