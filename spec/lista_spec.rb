@@ -24,10 +24,14 @@ require 'spec_helper'
                 @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
                
             end
+        
              describe "#Atributos de la lista" do
                 it "La lista tiene cabeza y cola" do
                     expect(@mi_lista).to have_attributes(:cabeza=>nil)
                     expect(@mi_lista).to have_attributes(:cola=>nil)
+                end
+                it "La lista esta vacia" do
+                    expect(@mi_lista.empty?).to eq(true)
                 end
              end
              describe "#Funcionalidad de la lista" do
