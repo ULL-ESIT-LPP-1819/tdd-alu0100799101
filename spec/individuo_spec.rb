@@ -83,6 +83,11 @@ require 'spec_helper'
             expect(Gema::Paciente.superclass.superclass).to eq(Object)
             expect(Gema::Paciente.superclass.superclass.superclass).to eq(BasicObject)
             
+            expect(@paciente2).to be_instance_of(Gema::Paciente)
+            expect(@paciente2.class).to eq(Gema::Paciente)
+            expect(Gema::Paciente.superclass).to eq(Gema::Individuo)
+            expect(Gema::Paciente.superclass.superclass).to eq(Object)
+            expect(Gema::Paciente.superclass.superclass.superclass).to eq(BasicObject)
             
             end
         end 
