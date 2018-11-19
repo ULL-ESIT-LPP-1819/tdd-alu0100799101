@@ -68,5 +68,19 @@ require 'spec_helper'
             
             end
         end
+        describe "Pruebas para comprobar  el tipo y la clase de un objeto y su pertenencia a una jerarquía" do
+            before :all do
+                @paciente1 = Gema::Paciente.new("Pedro",60,1.8,24,1,[50,51],[70,71])
+                @paciente2 = Gema::Paciente.new("Julia",80,1.6,34,0,[50,51],[80,81])
+                @paciente1.rcc
+                @paciente2.rcc
+            end
+            it "El objeto pertenece a la clase correspondiente " do
+            
+            @p1.is_a?Individuo
+            expect(@p1).to be_instance_of(Gema::Paciente)
+            expect(@p1.class).to be eq(Gema::Paciente)
+            end
+        end 
     end
 end
