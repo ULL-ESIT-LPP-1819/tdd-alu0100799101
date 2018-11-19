@@ -11,12 +11,12 @@ require 'spec_helper'
 	describe "Atributos para individuo" do 
 	 it "Existe un nombre para el individuo" do
            expect(@mujer1).to have_attributes(:nombre=>"Maria")
-	   expect(@hombtre1).to have_attributes(:nombre=>"Pablo")     
+	       expect(@hombre1).to have_attributes(:nombre=>"Pablo")     
         end
 
         it "Peso del individuo" do
             expect(@mujer1).to have_attributes(:peso=>70)
-	    expect(@hombre1).to have_attributes(:peso=>60)
+	        expect(@hombre1).to have_attributes(:peso=>60)
         end
 
         it "Talla del individuo " do
