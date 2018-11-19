@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 	RSpec.describe Gema::Individuo do 
-	before: each do 
+	before :each do 
 	      @mujer1 = Salud.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
 	      @mujer2 = Salud.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
 	      @hombre1 = Salud.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
