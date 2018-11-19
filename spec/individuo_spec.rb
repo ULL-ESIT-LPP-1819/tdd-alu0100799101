@@ -32,7 +32,7 @@ require 'spec_helper'
         describe "Pruebas Imc,Grasa y Oms" do
         
             it "Prueba IMC"do
-                expect(@mujer1.imc.round(3)).to eq(27.343)
+                expect(@mujer1.imc.round(3)).to eq(27.344)
                 expect(@hombre1.imc.round(3)).to eq(16.620)
             end
             it "Prueba grasa" do
@@ -40,8 +40,8 @@ require 'spec_helper'
                 expect(@hombre2.grasa.round(2)).to eq(40.12)
             end
             it "Prueba OMS" do
-                expect(@mujer1.oms).to eq("Bajo Peso,Delgado")
-                expect(@hombre1.oms).to eq("Sobrepeso,Sobrepeso")
+                expect(@mujer1.oms).to eq("Sobrepeso,Sobrepeso")
+                expect(@hombre1.oms).to eq("Bajo Peso,Delgado")
             end
                 
         end
