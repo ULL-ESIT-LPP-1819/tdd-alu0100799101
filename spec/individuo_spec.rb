@@ -45,5 +45,28 @@ require 'spec_helper'
             end
                 
         end
+        
+        describe "Prueba calculocintura,calculocadera , rcc y rccclasif" do
+             
+            it "Prueba calculo cintura" do
+                expect(@mujer1.calcintura.round(2)).to eq(80.1)
+                expect(@hombre1.calcintura.round(2)).to eq(61.3)
+            end
+            it "Prueba calculo cadera" do
+                expect(@mujer1.calcadera.round(2)).to eq(99.45)
+                expect(@hombre1.calcadera.round(2)).to eq()
+                
+            end
+            it "Prueba RCC" do
+                expect(@mujer1.rcc.round(2)).to eq(0.81)
+                expect(@hombre1.rcc.round(2)).to eq(0.83)
+            end
+            
+            it "Prueba rccclasif" do
+                expect(@mujer1.rccclasif).to eq ("Mujeres Riesgo Moderado")
+                expect(@hombre1.rccclasif).to eq("Hombres Riesgo Bajo")
+            
+            end
+        end
     end
 end
