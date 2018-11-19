@@ -54,7 +54,7 @@ require 'spec_helper'
             end
             it "Prueba calculo cadera" do
                 expect(@mujer1.calcadera.round(2)).to eq(99.45)
-                expect(@hombre1.calcadera.round(2)).to eq()
+                expect(@hombre1.calcadera.round(2)).to eq(73.65)
                 
             end
             it "Prueba RCC" do

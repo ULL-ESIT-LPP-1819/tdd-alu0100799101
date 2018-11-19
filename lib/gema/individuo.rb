@@ -36,6 +36,45 @@ module Gema
         	"Obesidad Grado 2,Obesidad"
     		end
     	end
+    	
+    	def calcintura
+       
+       ( @cintura[0] + @cintura[1] ) / 2
+		
+		end
+	    
+	    def calcadera
+	        ( @cadera[0] + @cadera[1] ) / 2
+	    end
+	   
+	   def rcc
+	    calcintura/calcadera
+	   end
+   
+		  def rccclasif
+			        if (sexo == 0)
+				       case rcc
+				          when 0.72...0.77
+				          "Mujeres Riesgo Bajo"
+				          when 0.78..0.82
+				          "Mujeres Riesgo Moderado"
+				          else
+				          "Mujeres Riesgo Alto o Muy Alto"
+			       end
+			     
+		    		else 
+				        case rcc 
+				           when 0.83...0.88
+				            "Hombres Riesgo Bajo"
+				            when 0.88...0.95
+				             "Hombres Riesgo Moderado"
+				             when 0.95 .. 1.01
+				              "Hombres Riesgo Alto"
+				             else
+				              "Hombres Riesgo Muy Alto"
+				        end
+		    		end
+		  end
 	end
 end
     
