@@ -20,8 +20,8 @@ require 'spec_helper'
         end
 
         it "Talla del individuo " do
-            expect(@mujer2).to have_attributes(:glucidos=>1.7)
-            expect(@hombres2).to have_attributes(:glucidos=>1.5)
+            expect(@mujer2).to have_attributes(:talla=>1.7)
+            expect(@hombre2).to have_attributes(:talla=>1.5)
         end
 
         it "Edad del individuo" do
