@@ -77,9 +77,10 @@ require 'spec_helper'
             end
             it "El objeto pertenece a la clase correspondiente " do
             
-            @p1.is_a?Individuo
-            expect(@p1).to be_instance_of(Gema::Paciente)
-            expect(@p1.class).to be eq(Gema::Paciente)
+            expect(@paciente1).to be_instance_of(Gema::Paciente)
+            expect(@paciente1.class).to eq(Gema::Paciente)
+            
+            
             end
         end 
     end

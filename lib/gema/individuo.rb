@@ -1,6 +1,7 @@
 module Gema
 
 	class Individuo
+	include Comparable
 	attr_reader :nombre,:peso,:talla,:edad ,:sexo
 	
 	    def initialize (nombre, peso, talla, edad, sexo, cintura, cadera)
@@ -38,10 +39,8 @@ module Gema
     	end
     	
     	def calcintura
-       
-       ( @cintura[0] + @cintura[1] ) / 2
-		
-		end
+    		( @cintura[0] + @cintura[1] ) / 2
+        end
 	    
 	    def calcadera
 	        ( @cadera[0] + @cadera[1] ) / 2
