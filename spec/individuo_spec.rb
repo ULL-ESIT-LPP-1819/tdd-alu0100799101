@@ -28,10 +28,13 @@ require 'spec_helper'
             expect(@mujer2).to have_attributes(:edad=>25.0)
             expect(@hombre2).to have_attributes(:edad=>13.0)
     	end
-    	
+    	it "Prueba to_s" do
+    	    expect(@mujer2.to_s).to eq("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
+        end
+        
         describe "Pruebas Imc,Grasa y Oms" do
         
-            it "Prueba IMC"do
+            it "Prueba IMC" do
                 expect(@mujer1.imc.round(3)).to eq(27.344)
                 expect(@hombre1.imc.round(3)).to eq(16.620)
             end
