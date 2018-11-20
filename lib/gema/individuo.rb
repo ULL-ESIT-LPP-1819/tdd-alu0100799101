@@ -1,7 +1,7 @@
 module Gema
 
 	class Individuo
-	include Comparable
+
 	attr_reader :nombre,:peso,:talla,:edad ,:sexo
 	
 	    def initialize (nombre, peso, talla, edad, sexo, cintura, cadera)
