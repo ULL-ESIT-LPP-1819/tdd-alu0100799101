@@ -15,6 +15,10 @@ module Gema
      		@cadera = cadera
      		
 		end
+		def to_s
+   			"(Nombre:#{@nombre},Peso:#{@peso},Talla:#{@talla},Edad:#{@edad},Sexo:#{@sexo})"
+    		
+		end
         def imc
     		@peso/(@talla * @talla)
     	end

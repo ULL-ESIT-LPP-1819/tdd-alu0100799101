@@ -29,7 +29,7 @@ require 'spec_helper'
             expect(@hombre2).to have_attributes(:edad=>13.0)
     	end
     	it "Prueba to_s" do
-    	    expect(@mujer2.to_s).to eq("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
+    	    expect(@mujer2.to_s) == ('Ficha Individuo: Nombre:Raquel, Peso:58 , Talla: 1,7 , Edad:25 , Sexo: 0')
         end
         
         describe "Pruebas Imc,Grasa y Oms" do
