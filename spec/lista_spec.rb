@@ -114,17 +114,17 @@ require 'spec_helper'
             end
              describe "Lista de Individuos" do
                 it "La lista operar correctamente con la clasificacion de masa corporal cada individuo" do
-                    @mi_lista.push_back(@individuo1)
                     @mi_lista.push_back(@individuo2)
-                    @mi_lista.push_front(@individuo4)
-                    @mi_lista.push_front(@individuo3)
+                    @mi_lista.push_back(@individuo3)
                     @mi_lista.push_back(@individuo5)
+                    @mi_lista.push_back(@individuo1)
+                    @mi_lista.push_back(@individuo4)
                     expect(@mi_lista.n_nodos).to eq(5)
                     expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
-                    expect(@mi_lista.pop_back.oms).to eq("Adecuado,Aceptable")
                     expect(@mi_lista.pop_back.oms).to eq("Sobrepeso,Sobrepeso")
                     expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
                     expect(@mi_lista.pop_back.oms).to eq("Bajo Peso,Delgado")
+                    expect(@mi_lista.pop_back.oms).to eq("Adecuado,Aceptable")
                     expect(@mi_lista.n_nodos).to eq(0)
                     
                 end
