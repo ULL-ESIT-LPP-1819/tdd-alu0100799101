@@ -22,6 +22,11 @@ require 'spec_helper'
                 @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
                 @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
                 @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+                @individuo1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
+	            @individuo2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
+	            @individuo3 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
+	            @individuo4 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2])
+	            @individuo5 = Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71])
                
             end
              describe "#Atributos de la lista" do
@@ -105,7 +110,24 @@ require 'spec_helper'
                     expect(@mi_lista.pop_back.sal).to be < 6
                   
                 end
-            
+                
             end
-        
-end
+             describe "Lista de Individuos" do
+                it "La lista operar correctamente con la clasificacion de masa corporal cada individuo" do
+                    @mi_lista.push_back(@individuo1)
+                    @mi_lista.push_back(@individuo2)
+                    @mi_lista.push_front(@individuo4)
+                    @mi_lista.push_front(@individuo3)
+                    @mi_lista.push_back(@individuo5)
+                    expect(@mi_lista.n_nodos).to eq(5)
+                    expect(@mi_lista.pop_back.oms).to eq("Inventad")
+                    expect(@mi_lista.pop_back.oms).to eq("Arroz")
+                    expect(@mi_lista.pop_back.oms).to eq("Inventa")
+                    expect(@mi_lista.pop_back.oms).to eq("Zumo")
+                    expect(@mi_lista.pop_back.oms).to eq("Inventada")
+                    expect(@mi_lista.pop_back.oms).to eq("Mermelada")
+                    expect(@mi_lista.n_nodos).to eq(0)
+                    
+                end
+            end
+ end
