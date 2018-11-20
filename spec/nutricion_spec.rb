@@ -1,7 +1,7 @@
 
 require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/nutricion.rb"
 
-describe Gema::Nutricion do
+RSpec.describe Gema::Nutricion do
     
     before :each do
         @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)

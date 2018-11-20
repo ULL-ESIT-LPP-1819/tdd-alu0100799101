@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-	RSpec.describe Gema::Individuo do 
+RSpec.describe Gema::Individuo do 
 	before :each do 
 	      @mujer1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
 	      @mujer2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
@@ -9,10 +9,10 @@ require 'spec_helper'
 	end
    
 	describe "Atributos para individuo" do 
-	 it "Existe un nombre para el individuo" do
+	     it "Existe un nombre para el individuo" do
            expect(@mujer1).to have_attributes(:nombre=>"Maria")
 	       expect(@hombre1).to have_attributes(:nombre=>"Pablo")     
-        end
+         end
 
         it "Peso del individuo" do
             expect(@mujer1).to have_attributes(:peso=>70)
