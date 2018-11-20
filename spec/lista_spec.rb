@@ -120,12 +120,11 @@ require 'spec_helper'
                     @mi_lista.push_front(@individuo3)
                     @mi_lista.push_back(@individuo5)
                     expect(@mi_lista.n_nodos).to eq(5)
-                    expect(@mi_lista.pop_back.oms).to eq("Inventad")
-                    expect(@mi_lista.pop_back.oms).to eq("Arroz")
-                    expect(@mi_lista.pop_back.oms).to eq("Inventa")
-                    expect(@mi_lista.pop_back.oms).to eq("Zumo")
-                    expect(@mi_lista.pop_back.oms).to eq("Inventada")
-                    expect(@mi_lista.pop_back.oms).to eq("Mermelada")
+                    expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
+                    expect(@mi_lista.pop_back.oms).to eq("Adecuado,Aceptable")
+                    expect(@mi_lista.pop_back.oms).to eq("Sobrepeso,Sobrepeso")
+                    expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
+                    expect(@mi_lista.pop_back.oms).to eq("Bajo Peso,Delgado")
                     expect(@mi_lista.n_nodos).to eq(0)
                     
                 end
