@@ -93,6 +93,7 @@ require 'spec_helper'
             expect(Gema::Paciente.superclass.superclass.superclass).to eq(BasicObject)
             
             end
+           
         end 
     end
 end

@@ -128,5 +128,19 @@ require 'spec_helper'
                     expect(@mi_lista.n_nodos).to eq(0)
                     
                 end
+                it "Prueba de lista con imc " do
+                    @mi_lista.push_back(@individuo2)
+                    @mi_lista.push_back(@individuo3)
+                    @mi_lista.push_back(@individuo5)
+                    @mi_lista.push_back(@individuo1)
+                    @mi_lista.push_back(@individuo4)
+                    expect(@mi_lista.n_nodos).to eq(5)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(44.44)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(27.34)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(18.52)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(16.62)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(20.07)
+                    expect(@mi_lista.n_nodos).to eq(0)
+                end
             end
  end
