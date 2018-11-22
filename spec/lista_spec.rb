@@ -25,7 +25,7 @@ require 'spec_helper'
                 @individuo1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
 	            @individuo2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
 	            @individuo3 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
-	            @individuo4 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2])
+	            @individuo4 = Gema::Individuo.new("Andres",68,1.5,13,1,[110.3,110.6],[99.8,100.2])
 	            @individuo5 = Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71])
                
             end
@@ -120,7 +120,7 @@ require 'spec_helper'
                     @mi_lista.push_back(@individuo1)
                     @mi_lista.push_back(@individuo4)
                     expect(@mi_lista.n_nodos).to eq(5)
-                    expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
+                    expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 1,Obesidad")
                     expect(@mi_lista.pop_back.oms).to eq("Sobrepeso,Sobrepeso")
                     expect(@mi_lista.pop_back.oms).to eq("Obesidad Grado 2,Obesidad")
                     expect(@mi_lista.pop_back.oms).to eq("Bajo Peso,Delgado")
@@ -135,7 +135,7 @@ require 'spec_helper'
                     @mi_lista.push_back(@individuo1)
                     @mi_lista.push_back(@individuo4)
                     expect(@mi_lista.n_nodos).to eq(5)
-                    expect(@mi_lista.pop_back.imc.round(2)).to eq(44.44)
+                    expect(@mi_lista.pop_back.imc.round(2)).to eq(30.22)
                     expect(@mi_lista.pop_back.imc.round(2)).to eq(27.34)
                     expect(@mi_lista.pop_back.imc.round(2)).to eq(18.52)
                     expect(@mi_lista.pop_back.imc.round(2)).to eq(16.62)
