@@ -230,6 +230,14 @@ RSpec.describe Gema::Nutricion do
             expect(@etiqueta3.salir).to eq(0)
             expect(@etiqueta4.salir).to eq(0)
         end
+        it "Prueba comprobacion tipo clase y jerarquia"do
+            expect(@etiqueta1).to be_instance_of(Gema::Nutricion)
+            expect(@etiqueta1.is_a?Object)
+            expect(@etiqueta1.respond_to?(:grasa))
+            expect(@etiqueta1.class).to eq(Gema::Nutricion)
+            expect(Gema::Individuo.superclass).to eq(Object)
+            expect(Gema::Individuo.superclass.superclass).to eq(BasicObject)
+        end
         it "Prueba Alimento Formateado"do
         expect(@etiqueta1.to_s) == ('Valores Nutricionales 100g/100ML Zumo (Grasas:1,Saturadas:0,MonoSaturadas:0,Polisaturadas:0,Hidratos:4.7,Azucares:4.2,Polialcohol:0,Almidon:0,Fibra:0,Proteinas:0.5,Sal:0.01')
         end

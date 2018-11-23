@@ -93,6 +93,10 @@ RSpec.describe Gema::Individuo do
             expect(Gema::Paciente.superclass.superclass.superclass).to eq(BasicObject)
             
             end
+            it"Pertenece al tipo x" do
+             expect(@paciente1.respond_to?(:imc))
+             expect(@paciente1.respond_to?(:oms))
+            end
            
         end 
     end

@@ -117,6 +117,13 @@ require 'spec_helper'
                 
             end
              describe "Lista de Individuos" do
+                 it "Prueba tipo,clase y jerarquia" do
+                  expect (@mi_lista.respond_to?(:imc))
+                  expect(@mi_lista.is_a?(Gema::Lista))
+                  expect(@mi_lista.class).to eq(Gema::Lista)
+                  expect(Gema::Lista.superclass).to eq(Object)
+                  expect(Gema::Lista.superclass.superclass).to eq(BasicObject)
+                 end
                 it "La lista operar correctamente con la clasificacion de masa corporal cada individuo" do
                     @mi_lista.push_back(@individuo2)
                     @mi_lista.push_back(@individuo3)
