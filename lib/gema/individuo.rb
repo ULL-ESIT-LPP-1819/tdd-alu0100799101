@@ -1,5 +1,5 @@
 module Gema
-
+	include Comparable
 	class Individuo
 
 	attr_reader :nombre,:peso,:talla,:edad ,:sexo
@@ -41,7 +41,9 @@ module Gema
         	"Obesidad Grado 2,Obesidad"
     		end
     	end
-    	
+    	def<=>(other)
+    		imc <=> other.imc
+    	end
     	def calcintura
     		( @cintura[0] + @cintura[1] ) / 2
         end
