@@ -249,10 +249,14 @@ RSpec.describe Gema::Nutricion do
                 expect(@etiqueta1 > @etiqueta2).to eq(true)
                 expect(@etiqueta1 < @etiqueta2).to eq(false)
                 expect(@etiqueta1 == @etiqueta2).to eq(false)
-                 expect(@etiqueta3 > @etiqueta4).to eq(true)
-                expect(@etiqueta3 < @etiqueta4).to eq(false)
+                 expect(@etiqueta3 > @etiqueta4).to eq(false)
+                expect(@etiqueta3 < @etiqueta4).to eq(true)
                 expect(@etiqueta3 == @etiqueta4).to eq(false)
             end
+            it "Un alimento esta entre dos alimentos según su  grasa" do
+                expect(@etiqueta1.between?(@etiqueta2, @etiqueta4)).to eq(true)
+            end
+
         
         end
         
