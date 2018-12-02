@@ -1,5 +1,22 @@
 module Gema
+# Clase que representa la etiqueta nutricional de un alimento.
+# @author Adrián Herrera Darias
+# @since 0.1.0
+# @attr_reader [String] nombre representa el nombre del alimento
+# @attr_reader [Numeric] grasa representa la cantidad de grasa del alimento.
+# @attr_reader [Numeric] saturadas representa la cantidad de grasas saturadas del alimento
+# @attr_reader [Numeric] mono representa la cantidad de monosaturadas del alimento.
+# @attr_reader [Numeric] polin representa la cantidad polinsaturadas del alimento
+# @attr_reader [Numeric] hidratos representa la cantidad de hidratos del alimento.
+# @attr_reader [Numeric] azucares representa la cantidad de azucares del alimento
+# @attr_reader [Numeric] polial representa la cantidad de polialcoholes del alimento
+# @attr_reader [Numeric] almidon representa la cantidad de almidon del alimento
+# @attr_reader [Numeric] fibra representa la cantidad fibra del alimento
+# @attr_reader [Numeric] proteinas representa la cantidad de proteinas del alimento.
+# @attr_reader [Numeric] sal representa la cantidad de sal del alimento.
+  
 class Nutricion 
+    include Comparable
     attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:polial,:almidon,:fibra,:proteinas,:sal
     
     def initialize(nombre,grasa,saturadas,mono,polin,hidratos,azucares,polial,almidon,fibra,proteinas,sal)
