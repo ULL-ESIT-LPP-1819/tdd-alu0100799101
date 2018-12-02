@@ -120,6 +120,11 @@ class Nutricion
     def salir
          @sal/6 * 100
     end
+    # Define que caracteriza las comparaciones entre los objetos alimentos
+    # @return [Numeric] 1 si es mayor -1 si es menor y 0 si los objetos son iguales
+    def <=>(other)
+      @grasa <=> other.grasa
+    end
     def to_s
       "( Nombre:#{@nombre},Grasa:#{@grasa},Saturadas:#{@saturadas},MonoSaturadas:#{@mono},Polisaturadas:#{@polin},Hidratos:#{@hidratos},Azucares:#{@azucares},Polialcohol:#{@polial},Almidon:#{@almidon},Fibra:#{@fibra},Proteinas:#{@proteinas},Sal:#{@sal})"
     end
