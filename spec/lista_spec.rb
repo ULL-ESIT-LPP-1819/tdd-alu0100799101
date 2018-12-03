@@ -161,9 +161,9 @@ require 'spec_helper'
                     @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
                     @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
                     @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
-                    @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,10)
-                    @etiqueta5 = Gema::Nutricion.new("Inventad",6,4,6,0.6,20,5,1,4,11,2,4)
-                    @etiqueta6 = Gema::Nutricion.new("Inventa",5,3,2,0.6,20,5,1,4,11,2,8)
+                    @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5)
+                    @etiqueta5 = Gema::Nutricion.new("Inventad",8,4,6,0.6,20,5,1,4,11,2,10)
+                    @etiqueta6 = Gema::Nutricion.new("Inventa",8,3,2,0.6,20,5,1,4,11,2,8)
                      @mi_lista_etiqueta.push_back(@etiqueta1)
                      @mi_lista_etiqueta.push_back(@etiqueta6)
                      @mi_lista_etiqueta.push_front(@etiqueta4)
@@ -177,10 +177,14 @@ require 'spec_helper'
                     expect(@mi_lista_etiqueta.max).to eq(@etiqueta4)
                     expect(@mi_lista_etiqueta.min).to eq(@etiqueta3)
                 end
+                #Recoge en un vector los valores que se le pasen
                 it "Prueba con collect donde obtenemos que valorenergeticoir es igual a 10 " do
                 expect(@mi_lista_etiqueta.collect{|i| i.valorenerir == 10}).to eq([false,false,false,false,false,false])
                end
-              
+               #Selecciona de la lista de la cabeza a la cola y lo guarda en un vector con los valores que cumplan con lo que se selecciona.
+               it "Prueba select donde obtendremos los valores que sean >= 37 en valor grasa"do
+                  expect(@mi_lista_etiqueta.select{|num| num.valorgrasakj >= 37}).to eq([@etiqueta4,@etiqueta1,@etiqueta6,@etiqueta5])
+                end
             end
      
 end
