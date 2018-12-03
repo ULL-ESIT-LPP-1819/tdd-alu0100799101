@@ -175,7 +175,7 @@ require 'spec_helper'
              it "Prueba obtiene max y min de la lista"do
                 expect(@mi_lista_etiqueta).to respond_to(:max)
                 expect(@mi_lista_etiqueta.max).to eq(@etiqueta4)
-                expect(@mi_lista_etiqueta.min).to eq(@etiqueta5)
+                expect(@mi_lista_etiqueta.min).to eq(@etiqueta3)
             end
        end
 end
