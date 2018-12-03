@@ -12,14 +12,7 @@ module Gema
             @cabeza = nil
             @cola = nil
         end
-        def each
-            aux = @cabeza
-            while aux != @cola
-                yield aux.valor
-                aux = aux.siguiente
-            end 
-            yield aux.valor
-        end
+        
         
          def empty?
               if @cabeza == nil
@@ -96,6 +89,13 @@ module Gema
                 valor_aux
             end
         end
-        
+        def each
+            aux = @cabeza
+            while aux != @cola
+                yield aux.valor
+                aux = aux.siguiente
+            end 
+            yield aux.valor
+        end
     end
 end
