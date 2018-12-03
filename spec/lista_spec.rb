@@ -161,9 +161,9 @@ require 'spec_helper'
                 @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
                 @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
                 @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
-                @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
-                @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
-                @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+                @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,10)
+                @etiqueta5 = Gema::Nutricion.new("Inventad",6,4,6,0.6,20,5,1,4,11,2,4)
+                @etiqueta6 = Gema::Nutricion.new("Inventa",5,3,2,0.6,20,5,1,4,11,2,8)
                  @mi_lista_etiqueta.push_back(@etiqueta1)
                  @mi_lista_etiqueta.push_back(@etiqueta6)
                  @mi_lista_etiqueta.push_front(@etiqueta4)
@@ -177,5 +177,9 @@ require 'spec_helper'
                 expect(@mi_lista_etiqueta.max).to eq(@etiqueta4)
                 expect(@mi_lista_etiqueta.min).to eq(@etiqueta3)
             end
+            it "Prueba select " do
+            expect(@mi_lista_etiqueta.select).to respond_to(:grasa)
+        
+        end
        end
 end
