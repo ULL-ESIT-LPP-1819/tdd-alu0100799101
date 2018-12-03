@@ -4,7 +4,7 @@ module Gema
     Nodo = Struct.new(:valor, :siguiente, :previo)
 
     class Lista
-        
+        include Enumerable
         attr_reader :n_nodos, :cabeza, :cola
         
         def initialize 
@@ -12,6 +12,15 @@ module Gema
             @cabeza = nil
             @cola = nil
         end
+        def each
+            aux = @cabeza
+            while aux != @cola
+                yield aux.valor
+                aux = aux.siguiente
+            end 
+            yield aux.valor
+        end
+        
          def empty?
               if @cabeza == nil
                return true

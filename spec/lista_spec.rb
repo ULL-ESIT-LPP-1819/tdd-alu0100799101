@@ -164,12 +164,18 @@ require 'spec_helper'
                 @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
                 @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
                 @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+                 @mi_lista_etiqueta.push_back(@etiqueta1)
+                 @mi_lista_etiqueta.push_back(@etiqueta6)
+                 @mi_lista_etiqueta.push_front(@etiqueta4)
+                 @mi_lista_etiqueta.push_front(@etiqueta3)
+                @mi_lista_etiqueta.push_back(@etiqueta2)
+                @mi_lista_etiqueta.push_back(@etiqueta5)
                end
             #Pruebas Enumerable Etiqueta
              it "Prueba obtiene max y min de la lista"do
                 expect(@mi_lista_etiqueta).to respond_to(:max)
-                expect(@mi_lista_etiqueta).to eq(@etiqueta1)
-                expect(@mi_lista_etiqueta).to eq(@etiqueta4)
+                expect(@mi_lista_etiqueta.max).to eq(@etiqueta4)
+                expect(@mi_lista_etiqueta.min).to eq(@etiqueta5)
             end
        end
 end
