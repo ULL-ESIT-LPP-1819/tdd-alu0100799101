@@ -154,4 +154,22 @@ require 'spec_helper'
                     expect(@mi_lista.n_nodos).to eq(0)
                 end
             end
- end
+            #Pruebas Practica 9
+        describe"Pruebas para enumerable " do
+               before :all do
+                @mi_lista_etiqueta = Gema::Lista.new()
+                @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
+                @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
+                @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
+                @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
+                @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
+                @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+               end
+            #Pruebas Enumerable Etiqueta
+             it "Prueba obtiene max y min de la lista"do
+                expect(@mi_lista_etiqueta).to respond_to(:max)
+                expect(@mi_lista_etiqueta).to eq(@etiqueta1)
+                expect(@mi_lista_etiqueta).to eq(@etiqueta4)
+            end
+       end
+end
