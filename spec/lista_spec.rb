@@ -178,13 +178,18 @@ require 'spec_helper'
                     expect(@mi_lista_etiqueta.min).to eq(@etiqueta3)
                 end
                 #Recoge en un vector los valores que se le pasen
-                it "Prueba con collect donde obtenemos que valorenergeticoir es igual a 10 " do
-                expect(@mi_lista_etiqueta.collect{|i| i.valorenerir == 10}).to eq([false,false,false,false,false,false])
+                it "Prueba con collect donde obtenemos que valorenergeticoir es menor igual a 10 " do
+                expect(@mi_lista_etiqueta.collect{|i| i.valorenerir <= 10}).to eq([true,false,true,false,false,false])
                end
                #Selecciona de la lista de la cabeza a la cola y lo guarda en un vector con los valores que cumplan con lo que se selecciona.
                it "Prueba select donde obtendremos los valores que sean >= 37 en valor grasa"do
                   expect(@mi_lista_etiqueta.select{|num| num.valorgrasakj >= 37}).to eq([@etiqueta4,@etiqueta1,@etiqueta6,@etiqueta5])
                 end
+                it "Prueba sort para ordodenar las etiquetas"do
+                    expect(@mi_lista_etiqueta.sort).to eq([@etiqueta3,@etiqueta2,@etiqueta1,@etiqueta4,@etiqueta6,@etiqueta5])
+                end
+            
             end
+             
      
 end
