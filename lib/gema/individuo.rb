@@ -42,7 +42,7 @@ module Gema
     		end
     	end
     	def <=>(other)
-         @peso <=> other.peso
+         imc <=> other.imc
     	end
     	def calcintura
     		( @cintura[0] + @cintura[1] ) / 2

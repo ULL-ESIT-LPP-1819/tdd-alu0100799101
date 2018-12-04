@@ -190,6 +190,28 @@ require 'spec_helper'
                 end
             
             end
-             
-     
+            #Prueba Practica 9 individuo
+            describe "Pruebas Enumerable individuo"do 
+                    before:all do
+                        @mi_lista_individuo = Gema::Lista.new()
+                        @individuo1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
+	                    @individuo2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
+	                    @individuo3 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
+	                    @individuo4 = Gema::Individuo.new("Andres",68,1.5,13,1,[110.3,110.6],[99.8,100.2])
+	                    @individuo5 = Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71])
+                        @mi_lista_individuo.push_front(@individuo1)
+                        @mi_lista_individuo.push_front(@individuo2)   
+                        @mi_lista_individuo.push_front(@individuo3)  
+                        @mi_lista_individuo.push_front(@individuo4)   
+                        @mi_lista_individuo.push_front(@individuo5)
+                    end
+                    #Max y min valor de la lista
+                    it"Prueba max y min individuo" do
+                        expect(@mi_lista_individuo.max).to eq(@individuo1)
+                        expect(@mi_lista_individuo.min).to eq(@inviduo2)
+                    end
+            
+            end   
+            
+            
 end
