@@ -1,8 +1,8 @@
 module Gema
 
 	class Individuo
-	include Comparable
-	attr_reader :nombre,:peso,:talla,:edad ,:sexo
+		include Comparable
+		attr_reader :nombre,:peso,:talla,:edad ,:sexo
 	
 	    def initialize (nombre, peso, talla, edad, sexo, cintura, cadera)
 		    
@@ -15,6 +15,7 @@ module Gema
      		@cadera = cadera
      		
 		end
+		
 		def to_s
    			"(Nombre:#{@nombre},Peso:#{@peso},Talla:#{@talla},Edad:#{@edad},Sexo:#{@sexo})"
     		
@@ -22,7 +23,9 @@ module Gema
         def imc
     		@peso/(@talla * @talla)
     	end
-    	
+    	def <=>(other)
+        	@peso<=> other.peso
+        end
     	def grasa
         	(1.2 * imc) + (0.23 * @edad) - (10.8 * @sexo ) - 5.4 
     	end
@@ -41,9 +44,7 @@ module Gema
         	"Obesidad Grado 2,Obesidad"
     		end
     	end
-    	def <=>(other)
-         imc <=> other.imc
-    	end
+    	
     	def calcintura
     		( @cintura[0] + @cintura[1] ) / 2
         end
