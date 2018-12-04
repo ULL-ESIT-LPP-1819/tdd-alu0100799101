@@ -207,10 +207,12 @@ require 'spec_helper'
                     end
                     #Max y min valor de la lista
                     it"Prueba max y min individuo" do
-                        expect(@mi_lista_individuo.max).to eq(@individuo1)
-                        expect(@mi_lista_individuo.min).to eq(@inviduo2)
+                        expect(@mi_lista_individuo.max).to eq(@individuo4)
+                        expect(@mi_lista_individuo.min).to eq(@individuo3)
                     end
-            
+                    it "Prueba con collect donde obtenemos que indivuos de la lista tienen imc >= 20 " do
+                        expect(@mi_lista_individuo.collect{|i| i.imc >= 20}).to eq([false,true,false,true,true])
+                    end
             end   
             
             

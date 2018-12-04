@@ -24,7 +24,7 @@ module Gema
     		@peso/(@talla * @talla)
     	end
     	def <=>(other)
-        	@peso<=> other.peso
+        	imc <=> other.imc
         end
     	def grasa
         	(1.2 * imc) + (0.23 * @edad) - (10.8 * @sexo ) - 5.4 

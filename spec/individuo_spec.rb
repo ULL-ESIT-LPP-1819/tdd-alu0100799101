@@ -101,7 +101,7 @@ RSpec.describe Gema::Individuo do
         end 
             #Pruebas Práctica 9 : Comparable
         describe "Los individuo comparables"do
-            it "Se comparan correctamente los alimentos" do
+            it "Se comparan correctamente los individuos" do
                 expect(@mujer1 > @mujer2).to eq(true)
                 expect(@mujer1 < @mujer2).to eq(false)
                 expect(@mujer1 == @mujer2).to eq(false)
