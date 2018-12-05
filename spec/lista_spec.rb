@@ -171,6 +171,9 @@ require 'spec_helper'
                     @mi_lista_etiqueta.push_back(@etiqueta2)
                     @mi_lista_etiqueta.push_back(@etiqueta5)
                    end
+                   it 'La lista se puede recorrer' do
+                        expect(@mi_lista_etiqueta).to respond_to(:each)
+                    end
                 #Pruebas Enumerable Etiqueta
                  it "Prueba obtiene max y min de la lista"do
                     expect(@mi_lista_etiqueta).to respond_to(:max)
@@ -205,6 +208,9 @@ require 'spec_helper'
                         @mi_lista_individuo.push_front(@individuo4)   
                         @mi_lista_individuo.push_front(@individuo5)
                     end
+                    it 'La lista se puede recorrer' do
+                             expect(@mi_lista_individuo).to respond_to(:each)
+                    end
                     #Max y min valor de la lista
                     it"Prueba max y min individuo" do
                         expect(@mi_lista_individuo.max).to eq(@individuo4)
@@ -213,11 +219,10 @@ require 'spec_helper'
                     it "Prueba con collect donde obtenemos que indivuos de la lista tienen imc >= 20 " do
                         expect(@mi_lista_individuo.collect{|i| i.imc >= 20}).to eq([false,true,false,true,true])
                     end
-                     #Selecciona de la lista los valores verdaderos que cumplan .
+                     #Selecciona de la lista de la cabeza a la cola y lo guarda en un vector con los valores que cumplan con lo que se selecciona.
                      it "Prueba select donde obtendremos los valores que sean >= 20 imc , obteniendo solo los verdaderos"do
                         expect(@mi_lista_individuo.select{|num| num.imc >= 20}).to eq([@individuo4,@individuo2,@individuo1])
                     end
-                    #Ordena la lista en un vector de menor a mayor imc
                     it "Prueba sort para ordodenar los individuos en indice de masa corporal de menor a mayor"do
                         expect(@mi_lista_individuo.sort).to eq([@individuo3,@individuo5,@individuo2,@individuo1,@individuo4])
                     end
