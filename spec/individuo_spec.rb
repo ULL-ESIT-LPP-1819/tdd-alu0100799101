@@ -112,8 +112,11 @@ RSpec.describe Gema::Individuo do
         end
         describe "Pruebas Práctica 10 Programación funcional"do
             it("Pruebas Peso teórico ideal")do
-                expect(@mujer1.respond_to(:pti))
-                expect(@mujer1.pti.round(3)).to eq()
+                expect(@mujer1.respond_to?(:pti))
+                expect(@mujer1.pti.round(3)).to eq(-61.3)
+                expect(@mujer2.pti.round(3)).to eq(-61.225)
+                expect(@hombre1.pti.round(3)).to eq(-61.075)
+                expect(@hombre2.pti.round(3)).to eq(-61.375)
             end
         end
     end
