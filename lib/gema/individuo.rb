@@ -83,6 +83,7 @@ module Gema
 		  end
 		  
 		  #Practica 10
+		 
 		   def pti #peso teorico ideal * 100 obtenerlo en cm 
 				 ((@talla - 1.50)  * 100 * 0.75  + 50)
 		   end
@@ -90,13 +91,15 @@ module Gema
 			      if (sexo == 0)
 			      	 
 			      	 (10 * @peso) + (6.25 * @talla * 100) - (5 * @edad) - 161
-			      end
+			      
 			      else 
 	  		      	 (10 * @peso) + (6.25 * @talla * 100) - (5 * @edad) + 5
 			      end
 		   end
-		   def eft #Efecto termogeno 
-				geb * 10
+		   
+		   def efecto_termogeno  #Efecto termogeno 
+				geb * 0.10
 		   end
-	end
+	end	   
+end
     
