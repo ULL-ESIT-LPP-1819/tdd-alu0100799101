@@ -95,5 +95,8 @@ module Gema
 	  		      	 (10 * @peso) + (6.25 * @talla * 100) - (5 * @edad) + 5
 			      end
 		   end
+		   def eft #Efecto termogeno 
+				geb * 10
+		   end
 	end
     
