@@ -152,10 +152,10 @@ RSpec.describe Gema::Individuo do
                      
             end
              it "Pruebas Gasto Actividad Fisica" do
-                expect(@mujer1.gaf.round(3)).to eq(143.9)
-                expect(@mujer2.gasf.round(3)).to eq(135.65)
-                expect(@hombre1.gaf.round(3)).to eq(161.75)
-                expect(@hombre2.gaf.round(3)).to eq(187.75)
+                expect(@mujer1.gaf.round(3)).to eq(0.0)
+                expect(@mujer2.gaf.round(3)).to eq(732.51)
+                expect(@hombre1.gaf.round(3)).to eq(436.725)
+                expect(@hombre2.gaf.round(3)).to eq(225.3)
                      
             end
        end
