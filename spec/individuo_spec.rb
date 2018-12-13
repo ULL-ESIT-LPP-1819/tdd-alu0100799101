@@ -6,6 +6,17 @@ RSpec.describe Gema::Individuo do
 	      @mujer2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
 	      @hombre1 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
 	      @hombre2 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2])
+	      @hombre3 =  Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71])
+	      
+          @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
+          @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
+          @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
+          @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
+          @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
+          @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+
+
+
 	end
    
 	describe "Atributos para individuo" do 
@@ -113,17 +124,17 @@ RSpec.describe Gema::Individuo do
         describe "Pruebas Práctica 10 Programación funcional"do
             it"Pruebas Peso teórico ideal"do
                 expect(@mujer1.respond_to?(:pti))
-                expect(@mujer1.pti.round(3)).to eq(-61.3)
-                expect(@mujer2.pti.round(3)).to eq(-61.225)
-                expect(@hombre1.pti.round(3)).to eq(-61.075)
-                expect(@hombre2.pti.round(3)).to eq(-61.375)
+                expect(@mujer1.pti.round(3)).to eq(57.5)
+                expect(@mujer2.pti.round(3)).to eq(61.225)
+                expect(@hombre1.pti.round(3)).to eq(61.075)
+                expect(@hombre2.pti.round(3)).to eq(61.375)
             end
             it "Pruebas gasto energetico basal"do
                 expect(@hombre1.respond_to?(:geb))
-                expect(@mujer1.geb.round(3)).to eq(-61.3)
-                expect(@mujer2.geb.round(3)).to eq(-61.225)
-                expect(@hombre1.geb.round(3)).to eq(-61.075)
-                expect(@hombre2.geb.round(3)).to eq(-61.375)
+                expect(@mujer1.geb.round(3)).to eq(615.0)
+                expect(@mujer2.geb.round(3)).to eq(470.625)
+                expect(@hombre1.geb.round(3)).to eq(441.875)
+                expect(@hombre2.geb.round(3)).to eq(949.375)
             
             end
         end

@@ -84,7 +84,7 @@ module Gema
 		  
 		  #Practica 10
 		   def pti #peso teorico ideal
-				 (@talla - 150) * 0.75 + 50
+				 ((@talla - 1.50)  * 100 *0.75)  + 50
 		   end
 		   def geb #gasto energetico basal
 			      if (sexo == 0)
@@ -96,5 +96,4 @@ module Gema
 			      end
 		   end
 	end
-
     
