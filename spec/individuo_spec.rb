@@ -125,9 +125,9 @@ RSpec.describe Gema::Individuo do
             it"Pruebas Peso teórico ideal"do
                 expect(@mujer1.respond_to?(:pti))
                 expect(@mujer1.pti.round(3)).to eq(57.5)
-                expect(@mujer2.pti.round(3)).to eq(61.225)
-                expect(@hombre1.pti.round(3)).to eq(61.075)
-                expect(@hombre2.pti.round(3)).to eq(61.375)
+                expect(@mujer2.pti.round(3)).to eq(65.0)
+                expect(@hombre1.pti.round(3)).to eq(80.0)
+                expect(@hombre2.pti.round(3)).to eq(50)
             end
             it "Pruebas gasto energetico basal"do
                 expect(@hombre1.respond_to?(:geb))
