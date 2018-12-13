@@ -81,6 +81,12 @@ module Gema
 				        end
 		    		end
 		  end
+		  
+		  #Practica 10
+		   def pti #peso teorico ideal
+				 (@talla - 150) * 0.75 + 50
+		   end
+		   	
 	end
 end
     
