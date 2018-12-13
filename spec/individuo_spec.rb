@@ -84,8 +84,8 @@ RSpec.describe Gema::Individuo do
         end
         describe "Pruebas para comprobar  el tipo y la clase de un objeto y su pertenencia a una jerarquía" do
             before :all do
-                @paciente1 = Gema::Paciente.new("Pedro",60,1.8,24,1,[50,51],[70,71])
-                @paciente2 = Gema::Paciente.new("Julia",80,1.6,34,0,[50,51],[80,81])
+                @paciente1 = Gema::Paciente.new("Pedro",60,1.8,24,1,[50,51],[70,71],0.12)
+                @paciente2 = Gema::Paciente.new("Julia",80,1.6,34,0,[50,51],[80,81],0.54)
                 @paciente1.imc
                 @paciente2.imc
             end

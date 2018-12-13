@@ -102,15 +102,15 @@ module Gema
 		   end
 		   def  gaf
 			      if (actividad_fisica ==  ' Reposo ' )
-			        factor_fisico =  0.0
+			         actividad_fisica =  0.0
 			      elsif (actividad_fisica ==  ' Actividad ligera ' )
-			        factor_fisico =  0.12
+			         actividad_fisica=  0.12
 			      elsif (actividad_fisica ==  ' Actividad moderada ' )
-			        factor_fisico =  0.27
+			        actividad_fisica =  0.27
 			      elsif (actividad_fisica ==  ' Actividad intensa ' )
-			        factor_fisico =  0.54
+			        actividad_fisica =  0.54
 			      end
-			      geb * factor_fisico
+			      geb * @actividad_fisica
     	  end
 	end	   
 end
