@@ -121,7 +121,7 @@ RSpec.describe Gema::Individuo do
                 expect(@hombre1 == @hombre2).to eq(false)
             end
         end
-        describe "Pruebas Práctica 10 Programación funcional"do
+        describe "Pruebas Práctica 10 Programación funcional para el Menú"do
             it"Pruebas Peso teórico ideal"do
                 expect(@mujer1.respond_to?(:pti))
                 expect(@mujer1.pti.round(3)).to eq(57.5)
@@ -131,12 +131,22 @@ RSpec.describe Gema::Individuo do
             end
             it "Pruebas gasto energetico basal"do
                 expect(@hombre1.respond_to?(:geb))
-                expect(@mujer1.geb.round(3)).to eq(615.0)
-                expect(@mujer2.geb.round(3)).to eq(470.625)
-                expect(@hombre1.geb.round(3)).to eq(441.875)
-                expect(@hombre2.geb.round(3)).to eq(949.375)
+                expect(@mujer1.geb.round(3)).to eq(1605.0)
+                expect(@mujer2.geb.round(3)).to eq(1522.5)
+                expect(@hombre1.geb.round(3)).to eq(1617.5)
+                expect(@hombre2.geb.round(3)).to eq(1877.5)
             
             end
+            it "Pruebas Efecto Termogeno" do
+                expect(@mujer1.eft.round(3)).to eq(1605.0)
+                expect(@mujer2.eft.round(3)).to eq(1522.5)
+                expect(@hombre1.eft.round(3)).to eq(1617.5)
+                expect(@hombre2.eft.round(3)).to eq(1877.5)
+                     
+            end
+        
+        
+        
         end
     end
 end
