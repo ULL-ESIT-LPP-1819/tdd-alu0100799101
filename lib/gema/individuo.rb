@@ -2,9 +2,9 @@ module Gema
 
 	class Individuo
 		include Comparable
-		attr_reader :nombre,:peso,:talla,:edad ,:sexo
+		attr_reader :nombre,:peso,:talla,:edad ,:sexo,:actividad_fisica
 	
-	    def initialize (nombre, peso, talla, edad, sexo, cintura, cadera)
+	    def initialize (nombre, peso, talla, edad, sexo, cintura, cadera ,actividad_fisica)
 		    
 		    @nombre=nombre
 		    @peso = peso
@@ -13,7 +13,7 @@ module Gema
      		@sexo = sexo
      		@cintura = cintura
      		@cadera = cadera
-     		
+     		@actividad_fisica = actividad_fisica
 		end
 		
 		def to_s
@@ -88,7 +88,7 @@ module Gema
 				 ((@talla - 1.50)  * 100 * 0.75  + 50)
 		   end
 		   def geb #gasto energetico basal
-			      if (sexo == 0)
+			      if (sexo == 0) # mujer
 			      	 
 			      	 (10 * @peso) + (6.25 * @talla * 100) - (5 * @edad) - 161
 			      
@@ -100,6 +100,18 @@ module Gema
 		   def efecto_termogeno  #Efecto termogeno 
 				geb * 0.10
 		   end
+		   def  gaf
+			      if (actividad_fisica ==  ' Reposo ' )
+			        factor_fisico =  0.0
+			      elsif (actividad_fisica ==  ' Actividad ligera ' )
+			        factor_fisico =  0.12
+			      elsif (actividad_fisica ==  ' Actividad moderada ' )
+			        factor_fisico =  0.27
+			      elsif (actividad_fisica ==  ' Actividad intensa ' )
+			        factor_fisico =  0.54
+			      end
+			      geb * factor_fisico
+    	  end
 	end	   
 end
     

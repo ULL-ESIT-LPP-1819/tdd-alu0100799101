@@ -2,11 +2,11 @@ require 'spec_helper'
 
 RSpec.describe Gema::Individuo do 
 	before :each do 
-	      @mujer1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6])
-	      @mujer2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3])
-	      @hombre1 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8])
-	      @hombre2 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2])
-	      @hombre3 =  Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71])
+	      @mujer1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6],0.0)
+	      @mujer2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3],0.54)
+	      @hombre1 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8],0.27)
+	      @hombre2 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2],0.12)
+	      @hombre3 =  Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71],0.0)
 	      
           @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
           @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
@@ -142,6 +142,20 @@ RSpec.describe Gema::Individuo do
                 expect(@mujer2.efecto_termogeno.round(3)).to eq(135.65)
                 expect(@hombre1.efecto_termogeno.round(3)).to eq(161.75)
                 expect(@hombre2.efecto_termogeno.round(3)).to eq(187.75)
+                     
+            end
+             it "Pruebas Efecto Termogeno" do
+                expect(@mujer1.efecto_termogeno.round(3)).to eq(143.9)
+                expect(@mujer2.efecto_termogeno.round(3)).to eq(135.65)
+                expect(@hombre1.efecto_termogeno.round(3)).to eq(161.75)
+                expect(@hombre2.efecto_termogeno.round(3)).to eq(187.75)
+                     
+            end
+             it "Pruebas Gasto Actividad Fisica" do
+                expect(@mujer1.gaf.round(3)).to eq(143.9)
+                expect(@mujer2.gasf.round(3)).to eq(135.65)
+                expect(@hombre1.gaf.round(3)).to eq(161.75)
+                expect(@hombre2.gaf.round(3)).to eq(187.75)
                      
             end
        end
