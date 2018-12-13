@@ -144,13 +144,7 @@ RSpec.describe Gema::Individuo do
                 expect(@hombre2.efecto_termogeno.round(3)).to eq(187.75)
                      
             end
-             it "Pruebas Efecto Termogeno" do
-                expect(@mujer1.efecto_termogeno.round(3)).to eq(143.9)
-                expect(@mujer2.efecto_termogeno.round(3)).to eq(135.65)
-                expect(@hombre1.efecto_termogeno.round(3)).to eq(161.75)
-                expect(@hombre2.efecto_termogeno.round(3)).to eq(187.75)
-                     
-            end
+        
              it "Pruebas Gasto Actividad Fisica" do
                 expect(@mujer1.gaf.round(3)).to eq(0.0)
                 expect(@mujer2.gaf.round(3)).to eq(732.51)
@@ -158,6 +152,14 @@ RSpec.describe Gema::Individuo do
                 expect(@hombre2.gaf.round(3)).to eq(225.3)
                      
             end
+             it "Pruebas Gasto Energetico Total" do
+                expect(@mujer1.geT.round(3)).to eq(1582.9)
+                expect(@mujer2.geT.round(3)).to eq(2224.66)
+                expect(@hombre1.geT.round(3)).to eq(2215.975)
+                expect(@hombre2.geT.round(3)).to eq(2290.55)
+                     
+            end
+            
        end
     end
 end

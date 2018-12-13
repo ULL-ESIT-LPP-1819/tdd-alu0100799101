@@ -111,7 +111,12 @@ module Gema
 			        actividad_fisica =  0.54
 			      end
 			      geb * @actividad_fisica
-    	  end
+    	   end
+    	   def geT
+    	   	
+    	   		geb + efecto_termogeno + gaf
+    	   	
+    	   end
 	end	   
 end
     
