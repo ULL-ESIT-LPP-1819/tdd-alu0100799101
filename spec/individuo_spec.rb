@@ -14,6 +14,13 @@ RSpec.describe Gema::Individuo do
           @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
           @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
           @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+          
+          @menu1 = [@etiqueta1,@etiqueta6]
+          @menu2 = [@etiqueta4,@etiqueta6]
+          @menu3 = [@etiqueta1,@etiqueta4]
+          @menu4 = [@etiqueta3,@etiqueta5]
+          @menu5 = [@etiqueta2,@etiqueta4]
+               
 
 
 
@@ -159,7 +166,13 @@ RSpec.describe Gema::Individuo do
                 expect(@hombre2.geT.round(3)).to eq(2290.55)
                      
             end
-            
+            it "Menú dietético 1 para el hombre2(individuo)" do
+            menucalorias = @menu1.map{ |i| i.valorenerkcal}
+            total_calorias = menucalorias.reduce(:+)
+            gasto_energetico = @hombre2.geT
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+            end
        end
     end
 end
