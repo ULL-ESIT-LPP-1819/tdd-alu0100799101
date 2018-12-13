@@ -166,10 +166,38 @@ RSpec.describe Gema::Individuo do
                 expect(@hombre2.geT.round(3)).to eq(2290.55)
                      
             end
-            it "Menú dietético 1 para el hombre2(individuo)" do
+            it "Menú  1 para el hombre2(individuo)" do
             menucalorias = @menu1.map{ |i| i.valorenerkcal}
             total_calorias = menucalorias.reduce(:+)
             gasto_energetico = @hombre2.geT
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+            end
+            it "Menú 2 para el hombre1(individuo)" do
+            menucalorias = @menu2.map{ |i| i.valorenerkcal}
+            total_calorias = menucalorias.reduce(:+)
+            gasto_energetico = @hombre1.geT
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+            end
+            it "Menú 3 para el mujer1(individuo)" do
+            menucalorias = @menu3.map{ |i| i.valorenerkcal}
+            total_calorias = menucalorias.reduce(:+)
+            gasto_energetico = @mujer1.geT
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+            end
+            it "Menú 2 para el hombre3(individuo)" do
+            menucalorias = @menu4.map{ |i| i.valorenerkcal}
+            total_calorias = menucalorias.reduce(:+)
+            gasto_energetico = @hombre3.geT
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+            end
+            it "Menú 2 para el mujer2(individuo)" do
+            menucalorias = @menu5.map{ |i| i.valorenerkcal}
+            total_calorias = menucalorias.reduce(:+)
+            gasto_energetico = @mujer2.geT
             gasto_energetico = gasto_energetico * 0.10
             expect(total_calorias >= gasto_energetico).to eq(true)
             end
