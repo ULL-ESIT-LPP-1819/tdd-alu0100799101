@@ -1,5 +1,4 @@
-
-require "/home/ubuntu/workspace/LPP-Practica2/tdd-alu0100799101/gema/lib/gema/nutricion.rb"
+require 'spec_helper'
 
 RSpec.describe Gema::Nutricion do
     
