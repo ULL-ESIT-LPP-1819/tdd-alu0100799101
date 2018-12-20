@@ -285,9 +285,28 @@ require 'spec_helper'
                   @menu10.push_back(@etiqueta6)
                   
                   @array_menu = [ @menu1 , @menu2, @menu3, @menu4 ,@menu5,@menu6,@menu7 ,@menu8 , @menu9 ,@menu10 ]
+                 
+                 @lista_individuos = Lista.new
+                 @lista_individuos.push_back =(@hombre1)
+                 @lista_individuos.push_back =(@hombre2)
+                 @lista_individuos.push_back =(@hombre3)
+                 @lista_individuos.push_back =(@mujer1)
+                 @lista_individuos.push_back = (@mujer2)
+                 @lista_individuos.push_back =(@mujer1)
+                 @lista_individuos.push_back = (@mujer2)
+                 @lista_individuos.push_back =(@hombre1)
+                 @lista_individuos.push_back =(@hombre2)
+                 @lista_individuos.push_back =(@hombre3)
                  end            
+                 
+                 it 'Obtener un vector ordenado a partir del vector de alimentos usando bucles for' do
+                    expect((for_sort(@lista_pacientes).collect { |it| it.nombre})).to eq(["Tomate", "Huevo frito", "Chocolate", "Aceite de oliva"])
+                    expect ((for_sort(@arra_menu).collect { |it| it.nombre})).to eq(["Tomate", "Huevo frito", "Chocolate", "Aceite de oliva"])
+                 end
     
-    
+                
+            
+                
     
             end
 end
