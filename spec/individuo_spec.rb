@@ -15,7 +15,12 @@ RSpec.describe Gema::Individuo do
           @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
           @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
           
-          @array_menu = [ @menu1 = [@etiqueta1,@etiqueta6], @menu2 = [@etiqueta4,@etiqueta6], @menu3 = [@etiqueta1,@etiqueta4], @menu4 = [@etiqueta3,@etiqueta5],@menu5 = [@etiqueta2,@etiqueta4],@menu6 = [@etiqueta5,@etiqueta6],@menu7 = [@etiqueta2,@etiqueta3],@menu8 = [@etiqueta1,@etiqueta2], @menu9 = [@etiqueta4,@etiqueta5],@menu10 = [@etiqueta3,@etiqueta6] ]
+          @menu1 = [@etiqueta1,@etiqueta6]
+          @menu2 = [@etiqueta4,@etiqueta6]
+          @menu3 = [@etiqueta1,@etiqueta4]
+          @menu4 = [@etiqueta3,@etiqueta5]
+          @menu5 = [@etiqueta2,@etiqueta4]
+               
 
 
 
@@ -197,9 +202,5 @@ RSpec.describe Gema::Individuo do
             expect(total_calorias >= gasto_energetico).to eq(true)
             end
        end
-        describe "Pruebas para  Practicas 11"do
-            
-        end
-    
     end
 end
