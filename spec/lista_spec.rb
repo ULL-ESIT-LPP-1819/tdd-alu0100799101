@@ -299,9 +299,10 @@ require 'spec_helper'
                  @lista_individuos.push_back(@hombre3)
                  end            
                  
-                 it 'Obtener un vector ordenado a partir del vector de alimentos usando bucles for' do
+                 it 'Prubas ordenar sort_for , sort_each, sort para lista_individuos' do
                     expect(@lista_individuos.sort_for).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
-                    expect (@array_menu.sort_for).to eq(["Tomate", "Huevo frito", "Chocolate", "Aceite de oliva"])
+                     expect(@lista_individuos.sort_each).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
+                      expect(@lista_individuos.map{ |x| x.geT}.sort ).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                  end
     
                 

@@ -129,6 +129,31 @@ module Gema
             
                 orden
           end
-    
+              def sort_each
+                        tmp = map{ |x| x.geT}
+                    
+                        i = 0
+                        tmp.each do |x|
+                        a = x
+                        i1 = i
+                        j = i1 + 1
+                    
+                            tmp[j..tmp.length - 1].each do |y|
+                                if (a > y)
+                                    a = y
+                                    i1 = j
+                                end
+                                j+=1
+                            end
+                    
+                            tmp[i1] = x
+                            tmp[i] = a
+                            i+=1
+                        end
+                    
+                        tmp
+                end
+                
+
     end
 end
