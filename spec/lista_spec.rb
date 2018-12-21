@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require  'benchmark'
     RSpec.describe Gema::Nodo do
         before :all do
             @mi_nodo = Gema::Nodo.new(2,nil,nil)
@@ -247,40 +247,40 @@ require 'spec_helper'
                   @menu1.push_back(@etiqueta1)
                   @menu1.push_back(@etiqueta6)
                  
-                  @menu2= Gema::Lista.new
+                  @menu2= Gema::Lista.new()
                   @menu2.push_back(@etiqueta4)
                   @menu2.push_back(@etiqueta6)
                  
-                 @menu3= Gema::Lista.new
+                 @menu3= Gema::Lista.new()
                   @menu3.push_back(@etiqueta1)
                   @menu3.push_back(@etiqueta4)
                   
-                  @menu4= Gema::Lista.new
+                  @menu4= Gema::Lista.new()
                   @menu4.push_back(@etiqueta3)
                   @menu4.push_back(@etiqueta5)
                  
-                 @menu5 = Gema::Lista.new
+                 @menu5 = Gema::Lista.new()
                   @menu5.push_back(@etiqueta2)
                   @menu5.push_back(@etiqueta4)
                 
-                  @menu6 = Gema::Lista.new
+                  @menu6 = Gema::Lista.new()
                   @menu6.push_back(@etiqueta5)
                   @menu6.push_back(@etiqueta6) 
                   
                   
-                  @menu7 = Gema::Lista.new
+                  @menu7 = Gema::Lista.new()
                   @menu7.push_back(@etiqueta2)
                   @menu7.push_back(@etiqueta3)
                   
-                  @menu8 = Gema::Lista.new
+                  @menu8 = Gema::Lista.new()
                   @menu8.push_back(@etiqueta1)
                   @menu8.push_back(@etiqueta2)
                   
-                  @menu9 = Gema::Lista.new
+                  @menu9 = Gema::Lista.new()
                   @menu9.push_back(@etiqueta4)
                   @menu9.push_back(@etiqueta5)
                   
-                  @menu10 = Gema::Lista.new
+                  @menu10 = Gema::Lista.new()
                   @menu10.push_back(@etiqueta3)
                   @menu10.push_back(@etiqueta6)
                   
@@ -305,8 +305,16 @@ require 'spec_helper'
                       expect(@lista_individuos.map{ |x| x.geT}.sort ).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                  end
     
-                
-            
+                                    
+                 it "Benchmark para Array y ListValue" do
+                            n = 50000
+                            Benchmark.bm do |x|
+                              x.report("for -> Lista:") {n.times do @paciente_list.sort_for; end}
+                              x.report("each -> Lista:"){n.times do @paciente_list.sort_each; end}
+                              x.report("sort -> Lista:"){n.times do @paciente_list.map{ |x| x.gasto_energetico_total}.sort ; end}
+                      
+                 end
+                    
                 
     
             end

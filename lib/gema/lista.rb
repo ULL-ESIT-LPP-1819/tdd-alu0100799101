@@ -1,10 +1,10 @@
-require"benchmark"
+
 module Gema
 
     Nodo = Struct.new(:valor, :siguiente, :previo)
 
     class Lista
-        include Benchmark,Enumerable,Comparable
+        include Enumerable,Comparable
         attr_reader :n_nodos, :cabeza, :cola
         
         def initialize 
@@ -110,6 +110,7 @@ module Gema
             end 
             yield aux.valor
         end
+      
          def sort_for
                 tmp = map{|x| x.geT}
                 orden = []
