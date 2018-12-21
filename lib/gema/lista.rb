@@ -102,15 +102,24 @@ module Gema
         n_nodos
         end
         
-        def each
-            aux = @cabeza
-            while aux != @cola
-                yield aux.valor
-                aux = aux.siguiente
-            end 
-            yield aux.valor
-        end
-      
+      #  def each
+       #     aux = @cabeza
+         #   while aux != @cola
+         #       yield aux.valor
+         #       aux = aux.siguiente
+          #  end 
+          #  yield aux.valor
+        #end
+        def each(&block)
+             node_aux = Nodo.new(nil,nil,nil)
+               node_aux = @cabeza
+    
+            while !(node_aux.nil?)
+               yield node_aux.valor
+    
+                 node_aux = node_aux.siguiente
+            end
+        end 
          def sort_for
                 tmp = map{|x| x.geT}
                 orden = []

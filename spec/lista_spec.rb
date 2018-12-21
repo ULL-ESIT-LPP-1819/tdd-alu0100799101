@@ -299,12 +299,15 @@ require  'benchmark'
                  @lista_individuos.push_back(@hombre3)
                  end            
                  
-                 it 'Prubas ordenar sort_for , sort_each, sort para lista_individuos' do
+                 it "Prubas ordenar sort_for , sort_each, sort para lista_individuos" do
                     expect(@lista_individuos.sort_for).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                      expect(@lista_individuos.sort_each).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                       expect(@lista_individuos.map{ |x| x.geT}.sort ).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                  end
-    
+                    it "Prueba para ordenar menus sort_for,sort_each,sort " do
+                        expect(@array_menu.sort_for).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55]) 
+                        
+                    end
                                     
                  it "Benchmark para Array y ListValue" do
                             n = 50000
