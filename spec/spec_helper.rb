@@ -1,4 +1,5 @@
 require "coveralls"
+Coveralls.wear!
 require"gema"
 require"gema/lista"
 require"gema/nutricion"
@@ -105,4 +106,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-Coveralls.wear!
+
