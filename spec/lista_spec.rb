@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require  'benchmark'
     RSpec.describe Gema::Nodo do
         before :all do
             @mi_nodo = Gema::Nodo.new(2,nil,nil)
@@ -196,6 +196,7 @@ require 'spec_helper'
             #Prueba Practica 9 individuo
             describe "Pruebas Enumerable individuo"do 
                     before:all do
+                        
                         @mi_lista_individuo = Gema::Lista.new()
                         @individuo1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6],0.0)
 	                    @individuo2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3],0.54)
@@ -227,6 +228,94 @@ require 'spec_helper'
                         expect(@mi_lista_individuo.sort).to eq([@individuo3,@individuo5,@individuo2,@individuo1,@individuo4])
                     end
             end   
-            
-            
+            describe "Pruebas 11" do
+                before:each do
+                  @mujer1 = Gema::Individuo.new("Maria",70,1.6,20,0,[80,80.2],[99.3,99.6],0.0)
+        	      @mujer2 = Gema::Individuo.new("Raquel",58,1.7,25,0,[51.2,51.5],[70.1,70.3],0.54)
+        	      @hombre1 = Gema::Individuo.new("Pablo",60,1.9,35,1,[61.1,61.5],[73.5,73.8],0.27)
+        	      @hombre2 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2],0.12)
+        	      @hombre3 =  Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71],0.0)
+        	      
+                  @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
+                  @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
+                  @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
+                  @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
+                  @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
+                  @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+                    
+                  @menu1= Gema::Lista.new()
+                  @menu1.push_back(@etiqueta1)
+                  @menu1.push_back(@etiqueta6)
+                 
+                  @menu2= Gema::Lista.new()
+                  @menu2.push_back(@etiqueta4)
+                  @menu2.push_back(@etiqueta6)
+                 
+                 @menu3= Gema::Lista.new()
+                  @menu3.push_back(@etiqueta1)
+                  @menu3.push_back(@etiqueta4)
+                  
+                  @menu4= Gema::Lista.new()
+                  @menu4.push_back(@etiqueta3)
+                  @menu4.push_back(@etiqueta5)
+                 
+                 @menu5 = Gema::Lista.new()
+                  @menu5.push_back(@etiqueta2)
+                  @menu5.push_back(@etiqueta4)
+                
+                  @menu6 = Gema::Lista.new()
+                  @menu6.push_back(@etiqueta5)
+                  @menu6.push_back(@etiqueta6) 
+                  
+                  
+                  @menu7 = Gema::Lista.new()
+                  @menu7.push_back(@etiqueta2)
+                  @menu7.push_back(@etiqueta3)
+                  
+                  @menu8 = Gema::Lista.new()
+                  @menu8.push_back(@etiqueta1)
+                  @menu8.push_back(@etiqueta2)
+                  
+                  @menu9 = Gema::Lista.new()
+                  @menu9.push_back(@etiqueta4)
+                  @menu9.push_back(@etiqueta5)
+                  
+                  @menu10 = Gema::Lista.new()
+                  @menu10.push_back(@etiqueta3)
+                  @menu10.push_back(@etiqueta6)
+                  
+                  @array_menu = [ @menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10 ]
+                 
+                 @lista_individuos = Gema::Lista.new()
+                 @lista_individuos.push_back(@hombre1)
+                 @lista_individuos.push_back(@hombre2)
+                 @lista_individuos.push_back(@hombre3)
+                 @lista_individuos.push_back(@mujer1)
+                 @lista_individuos.push_back(@mujer2)
+                 @lista_individuos.push_back(@mujer1)
+                 @lista_individuos.push_back(@mujer2)
+                 @lista_individuos.push_back(@hombre1)
+                 @lista_individuos.push_back(@hombre2)
+                 @lista_individuos.push_back(@hombre3)
+                 end            
+                 
+                 it 'Prubas ordenar sort_for , sort_each, sort para lista_individuos' do
+                    expect(@lista_individuos.sort_for).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
+                     expect(@lista_individuos.sort_each).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
+                      expect(@lista_individuos.map{ |x| x.geT}.sort ).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
+                 end
+    
+                                    
+                 it "Benchmark para Array y ListValue" do
+                            n = 50000
+                            Benchmark.bm do |x|
+                              x.report("for -> Lista:") {n.times do @paciente_list.sort_for; end}
+                              x.report("each -> Lista:"){n.times do @paciente_list.sort_each; end}
+                              x.report("sort -> Lista:"){n.times do @paciente_list.map{ |x| x.gasto_energetico_total}.sort ; end}
+                      
+                 end
+                    
+                
+    
+            end
 end
