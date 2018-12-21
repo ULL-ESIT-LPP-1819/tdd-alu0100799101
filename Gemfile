@@ -8,3 +8,4 @@ gem 'rake' , '~> 10.0'
 gem 'guard'
 gem 'guard-rspec'
 gem 'guard-bundler'
+gem 'coveralls', require: false

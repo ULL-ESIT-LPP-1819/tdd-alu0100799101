@@ -309,13 +309,14 @@ require  'benchmark'
                  it "Benchmark para Array y ListValue" do
                             n = 50000
                             Benchmark.bm do |x|
-                              x.report("for -> Lista:") {n.times do @paciente_list.sort_for; end}
-                              x.report("each -> Lista:"){n.times do @paciente_list.sort_each; end}
-                              x.report("sort -> Lista:"){n.times do @paciente_list.map{ |x| x.gasto_energetico_total}.sort ; end}
+                              x.report("for -> Lista:") {n.times do @lista_individuos.sort_for; end}
+                              x.report("each -> Lista:"){n.times do @lista_individuos.sort_each; end}
+                              x.report("sort -> Lista:"){n.times do @lista_individuos.map{ |x| x.geT}.sort;end}
                       
                  end
                     
                 
     
             end
+    end
 end
