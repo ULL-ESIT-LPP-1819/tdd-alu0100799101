@@ -305,7 +305,7 @@ require  'benchmark'
                       expect(@lista_individuos.map{ |x| x.geT}.sort ).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55])
                  end
                     it "Prueba para ordenar menus sort_for,sort_each,sort " do
-                        expect(@array_menu.sort_for).to eq([1582.9, 1582.9, 1771.0, 1771.0, 2215.975, 2215.975, 2224.6600000000003, 2224.6600000000003, 2290.55, 2290.55]) 
+                        expect(@array_menu.sort_for).to eq([355.66, 373.02000000000004, 373.66, 437.96000000000004, 438.6, 450.6, 668.96, 669.6, 681.6, 699.6]) 
                         
                     end
                                     

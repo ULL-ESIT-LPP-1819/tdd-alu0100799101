@@ -20,6 +20,9 @@ module Gema
          def <=>(other)
            @grasa <=> other.grasa
          end
+        def + (other)
+            valorenerkcal + other.valorenerkcal
+        end
         def valorgrasakj
             @grasa * 37
         end
