@@ -258,6 +258,5 @@ RSpec.describe Gema::Nutricion do
 
         
         end
-        
     end
 end

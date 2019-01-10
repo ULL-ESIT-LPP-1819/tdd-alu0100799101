@@ -102,14 +102,7 @@ module Gema
         n_nodos
         end
         
-      #  def each
-       #     aux = @cabeza
-         #   while aux != @cola
-         #       yield aux.valor
-         #       aux = aux.siguiente
-          #  end 
-          #  yield aux.valor
-        #end
+     
         def each(&block)
              node_aux = Nodo.new(nil,nil,nil)
                node_aux = @cabeza
