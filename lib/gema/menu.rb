@@ -17,5 +17,31 @@ class Menu
         instance_eval(&block)
       end
     end
+    def to_s
+        output = @dia
+        output << "\t\tTitulo: #{@titl}\n"
+        output << "Ingesta min: #{@ingesta_min} - Ingesta max: #{@ingesta_max}\n"
+        output << "==================================================================\n"
+        output << "".ljust(25) << "grasas".ljust(15) << "carbohid.".ljust(15) <<
+        "proteínas".ljust(15) << "fibra".ljust(15) << "sal".ljust(15) << "valor energético\n"
+    
+        { 'Desayuno' => @al_desayuno,
+          'Almuerzo' => @al_almuerzo,
+          'Cena' => @al_cena }.each do |nombre, comida|
+          output << "-- #{nombre} --\n"
+          comida.each do |x|
+            output << x.nombre.ljust(25) << x.grasas.to_s.ljust(15) << x.hidratos.to_s.ljust(15) <<
+            x.proteinas.to_s.ljust(15) << x.fibra_alimentaria.to_s.ljust(15) << x.sal.to_s.ljust(15) << x.valor_nutr_kcal.to_s << "\n"
+          end
+          output << "\n"
+        end
+    
+        output << "Valor energetico total\t"
+        output << (@al_desayuno + @al_almuerzo + @al_cena).collect(&:valor_nutr_kcal).reduce(:+).to_s
+    
+        output
+    end
+  
+  
   end
 end
