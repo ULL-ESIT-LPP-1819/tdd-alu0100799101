@@ -1,3 +1,4 @@
+require'lib/menu'
 RSpec.describe Menu do
   before :each do
 
@@ -53,7 +54,7 @@ RSpec.describe Menu do
        it "Prueba to_s" do
            expect(@menu_semanal).to respond_to(:to_s)
        end
-        
+        puts @menu_semanal.to_s
         
         
     end
