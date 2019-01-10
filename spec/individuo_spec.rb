@@ -8,12 +8,12 @@ RSpec.describe Gema::Individuo do
 	      @hombre2 = Gema::Individuo.new("Andres",100,1.5,13,1,[110.3,110.6],[99.8,100.2],0.12)
 	      @hombre3 =  Gema::Individuo.new("Pedro",60,1.8,24,1,[50,51],[70,71],0.0)
 	      
-          @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01)
-          @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01)
-          @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0)
-          @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5) 
-          @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10)
-          @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8)
+          @etiqueta1 = Gema::Nutricion.new("Zumo",1,0,0,0,4.7,4.2,0,0,0,0.5,0.01,"1 vaso")
+          @etiqueta2 = Gema::Nutricion.new("Arroz",0.7,0.2,0,0,77,0.5,0,0,0,7.2,0.01,"1 taza")
+          @etiqueta3 = Gema::Nutricion.new("Mermelada",0,0,0,0,17,4.2,5,0,6.4,0.5,0,"1 cucharada")
+          @etiqueta4 = Gema::Nutricion.new("Inventada",8,5,10,0.6,20,5,1,4,11,2,5,"1") 
+          @etiqueta5 = Gema::Nutricion.new("Inventad",8,5,10,0.6,20,5,1,4,11,2,10,"2")
+          @etiqueta6 = Gema::Nutricion.new("Inventa",8,5,10,0.6,20,5,1,4,11,2,8,"3")
           
           @menu1 = [@etiqueta1,@etiqueta6]
           @menu2 = [@etiqueta4,@etiqueta6]

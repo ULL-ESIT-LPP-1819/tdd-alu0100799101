@@ -1,5 +1,5 @@
 class Menu
-  attr_accessor :dia, :titl, :ingesta_min, :ingesta_max, :al_desayuno, :al_almuerzo, :al_cena
+  attr_accessor :dia, :titulo, :ingesta_min, :ingesta_max, :desayuno, :almuerzo, :cena
 
   def initialize(dia, &block)
     @dia = dia

@@ -1,7 +1,7 @@
 module Gema
     class Nutricion 
         include Comparable,Enumerable
-        attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:polial,:almidon,:fibra,:proteinas,:sal,:porcion
+        attr_reader :nombre , :grasa ,:saturadas,:mono,:polin,:hidratos,:azucares,:polial,:almidon,:fibra,:proteinas,:sal,:porciones
         
         def initialize(nombre,grasa,saturadas,mono,polin,hidratos,azucares,polial,almidon,fibra,proteinas,sal,porciones)
         @nombre = nombre
@@ -16,7 +16,7 @@ module Gema
     	@fibra=fibra
     	@proteinas=proteinas
     	@sal=sal
-    	@porcion=porcion
+    	@porciones=porciones
         end
          def <=>(other)
            @grasa <=> other.grasa
