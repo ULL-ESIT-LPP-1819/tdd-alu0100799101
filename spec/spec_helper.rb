@@ -1,6 +1,7 @@
 require "coveralls"
 Coveralls.wear!
 require"gema"
+require"gema/menu"
 require"gema/lista"
 require"gema/nutricion"
 require"gema/individuo"
