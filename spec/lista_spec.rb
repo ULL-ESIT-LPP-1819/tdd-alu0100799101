@@ -310,23 +310,23 @@ require  'benchmark'
                          expect(@array_menu.map{|x|  x.reduce(:+)}.sort).to eq([355.66, 373.02000000000004, 373.66, 437.96000000000004, 438.6, 450.6, 668.96, 669.6, 681.6, 699.6])
                     end
                                     
-               #  it "Benchmark para Array y ListValue" do
-                #            n = 50000
-                 #           Benchmark.bm do |x|
-                  #            x.report("for -> Lista:") {n.times do @lista_individuos.sort_for; end}
-                   #           x.report("each -> Lista:"){n.times do @lista_individuos.sort_each; end}
-                    #          x.report("sort -> Lista:"){n.times do @lista_individuos.map{ |x| x.geT}.sort;end}
+                 it "Benchmark para Array y ListValue" do
+                            n = 50000
+                            Benchmark.bm do |x|
+                              x.report("for -> Lista:") {n.times do @lista_individuos.sort_for; end}
+                              x.report("each -> Lista:"){n.times do @lista_individuos.sort_each; end}
+                              x.report("sort -> Lista:"){n.times do @lista_individuos.map{ |x| x.geT}.sort;end}
                               
-                     #         x.report("for -> Array:") {n.times do @array_menu.sort_for; end}
-                     #         x.report("each -> Array:"){n.times do @array_menu.sort_each; end}
-                     #         x.report("sort -> Array:"){n.times do @array_menu.map{ |x| x.reduce(:+)}.sort; end}
+                              x.report("for -> Array:") {n.times do @array_menu.sort_for; end}
+                              x.report("each -> Array:"){n.times do @array_menu.sort_each; end}
+                              x.report("sort -> Array:"){n.times do @array_menu.map{ |x| x.reduce(:+)}.sort; end}
                       
                 
                 
-                 #end
+                 end
                     
                 
     
             end
     end
-
+end
